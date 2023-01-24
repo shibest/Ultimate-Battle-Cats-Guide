@@ -1,0 +1,98 @@
+{
+    "momoco-basic":[
+       {
+          "name":"Wonder MOMOCO",
+          "description":"His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ],
+    "momoco-evolved":[
+        {
+           "name":"Cutie MOMOCO",
+           "description":"His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.",
+           "target":"none",
+           "abilities":[
+              {
+                 "1":"Immune to Weaken"
+              }
+           ]
+        }
+    ],
+    "lesserdemon-basic":[
+       {
+          "name":"Lesser Demon Cat",
+          "description":"A mad cat that sacrificed itself to a demon from the netherworld. Attacks with extreme force.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ],
+    "lesserdemon-evolved":[
+       {
+          "name":"Greater Demon Cat",
+          "description":"The mad cat managed to control the demon from the netherworld. Attacks with extreme force.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ],
+    "lesserdemon-true":[
+       {
+          "name":"Greater Balrog Cat",
+          "description":"His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ],
+    "baby-basic":[
+       {
+          "name":"Baby Cat",
+          "description":"His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ],
+    "baby-evolved":[
+       {
+          "name":"Baby Cats",
+          "description":"His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ],
+    "baby-true":[
+       {
+          "name":"Cats in a Cradle",
+          "description":"His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.",
+          "target":"none",
+          "abilities":[
+             {
+                "1":"Immune to Weaken"
+             }
+          ]
+       }
+    ]
+ }

@@ -1,0 +1,273 @@
+1. Lesser Demon Cat ($)
+{Melee & Nuker}
+2. Baby Cat
+{Nuker & Melee(Normal/Evolved) | Nuker & Waver(True)}
+3. Lasvoss
+{Nuker}
+4. Wonder MOMOCO (L)
+{Crowd-Controller & Waver}
+5. Ice Cat
+{Crowd-Controller & Midranger(Normal/Evolved) | Crowd-Controller & Backliner(True)}
+6. Summoner Satoru (N)
+{Backliner & Crowd-Controller}
+7. Marauder Cat
+{Critter}
+------------------------------------------------------
+8. Nurse Cat
+{?}
+9. Cat Machine
+{Tanker}
+10. Cat Clan Heroes
+{Crowd-Controller}
+*Unranked: Cat Tengu
+{Backliner & Crowd-Controller}
+
+1. Tecoluga ($)
+{Nuker & Super-Backliner}
+2. Togeluga ($)
+{Backliner & Nuker}
+3. Balaluga
+{Crowd-Controller & Super-Backliner}
+4. Asiluga
+{Crowd-Controller & Super-Backliner}
+------------------------------------------------------
+5. Legeluga (L)
+{Rusher}
+6. Kubiluga
+{Backliner & Crowd-Controller(Evolved) | Backliner & Critter(True)}
+7. Nekoluga
+{Super-Backliner & Crowd-Controller}
+8. Nobiluga
+{Sniper}
+9. Furiluga (N)
+{Breaker & Super-Backliner}
+10. Papaluga
+{Backliner & Crowd-Controller}
+
+1. Sanada Yukimura ($)
+{Rusher & Nuker}
+2. Maeda Keiji
+{Midranger & Tanker}
+3. Takeda Shingen
+{Nuker}
+4. Uesugi Kenshin
+{Backliner & Crowd-Controller}
+5. Musashi Miyamoto (L)
+{Nuker}
+6. Imagawa Yoshimoto
+{Sniper & Crowd-Controller}
+------------------------------------------------------
+7. Narita Kaihime
+{Backliner & Crowd-Controller}
+8. Shiro Amakusa (N)
+{?}
+9. Date Masamune
+{Crowd-Controller & Midranger(Normal/Evolved) | Crowd-Controller & Backliner(True)}
+10. Oda Nobunaga
+{Crowd-Controller}
+*Unranked: Hattori Hanzo
+{?}
+
+1. Kai
+{Tanker & Melee}
+2. Kalisa
+{Rusher & Nuker}
+3. Headmistress Jeanne (L)
+{Nuker & Sniper}
+4. Thundia
+{Nuker & Backliner}
+5. Windy
+{Nuker}
+6. Twinstars
+{Rusher & Nuker}
+------------------------------------------------------
+7. Kuu
+{?}
+8. Lilin (N)
+{Midranger & Breaker}
+9. Coppermine
+{Crowd-Controller & Midranger(Normal/Evolved) | Crowd-Controller & Backliner(True)}
+10. Myrcia
+{?}
+*Unranked: Huntress Terun
+{Crowd-Controller & Backliner}
+
+[Lords of Destruction - Dragon Emperors]
+1. Ganglion
+{Rusher & Midranger}
+2. Vars
+{Backliner & Crowd-Controller}
+3. Raiden
+{Crowd-Controller & Midranger(Normal/Evolved) | Crowd-Controller & Backliner(True)}
+4. Hevijak the Wicked (N)
+{Backliner}
+------------------------------------------------------
+5. Kamukura
+{Backliner & Crowd-Controller}
+6. Megidora
+{Backliner & Crowd-Controller}
+7. Relentless Gladios
+{Crowd-Controller}
+8. High Lord Babel (L)
+{Tanker}
+9. Dioramos
+{Crowd-Controller & Tanker}
+10. Sodom
+{Tanker & Backliner}
+*Unranked: Sea Serpent Daliasan
+{Super-Backliner}
+
+[Ancient Heroes - Ultra Souls]
+1. Kasa Jizo ($)
+{Midranger(Normal) | Nuker(Evolved/True)}
+2. Ushiwakamaru (L)
+{Midranger(Normal) | Nuker & Tanker(True)}
+3. Kintaro
+{Sniper & Crowd-Controller}
+4. Momotaro
+{Crowd-Controller(Normal) | Rusher & Crowd-Controller(Evolved/True)}
+5. Sarukani
+{Midranger(Normal) | Nuker & Backliner(Evolved/True)}
+6. Urashima Taro
+{Tanker}
+7. The Grateful Crane
+{Crowd-Controller(Normal) | Super-Backliner & Crowd-Controller(Evolved/True)}
+------------------------------------------------------
+8. Princess Kaguya
+{?}
+9. Kachi-Kachi
+{Crowd-Controller}
+10. Shitakiri Sparrow (N)
+{Crowd-Controller}
+
+[Justice Strikes Back - Dark Heroes]
+1. Catman
+{Nuker}
+2. Sharpshooter Saki ($)
+{Sniper}
+3. Warlock and Pierre
+{Nuker}
+4. Doktor Heaven (L)
+{Tanker(Normal) | Nuker(Evolved)}
+5. Mekako Saionji
+{Tanker(Normal) | Crowd-Controller(Evolved) | Nuker & Crowd-Controller(True)}
+6. Hayabusa
+{Critter & Rusher(Normal) | Crowd-Controller & Rusher(Evolved/True)}
+7. Detective Vigler
+{Crowd-Controller}
+------------------------------------------------------
+8. Akira
+{?}
+9. White Knight Cyclops (N)
+{Crowd-Controller & Backliner(Normal) | Backliner(Evolved)}
+10. The White Rabbit
+{Backliner & Crowd-Controller(Normal/True) | Backliner(Evolved)}
+
+[The Almighties - The Majestic Zeus]
+1. Radiant Aphrodite ($)
+{Sniper & Nuker}
+2. Shining Amaterasu ($)
+{Backliner & Nuker}
+3. Gaia the Creator (L, $)
+{Nuker}
+4. Empress Chronos ($)
+{Crowd-Controller}
+5. Splendid Ganesha
+{Sniper}
+6. Lucifer the Fallen (N)
+{Super-Backliner}
+7. Wrathful Poseidon
+{Rusher & Crowd-Controller}
+8. Hades the Punisher
+{Tanker}
+------------------------------------------------------
+9. Anubis the Protector
+{Backliner}
+10. Thunder God Zeus
+{Backliner}
+
+[Frontline Assault - Iron Legion] ~ "Anti-Zombie Set"
+1. Mighty Thermae D-Lux
+{Sniper & Crowd-Controller}
+2. Mighty Krystal Muu (L)
+{Nuker & Tanker}
+3. Mighty Drednot
+{Nuker}
+4. Mighty Rekon Korps
+{Nuker}
+5. Mighty Bomburr
+{Backliner & Crowd-Controller}
+6. Mighty Aethur Ltd.
+{Nuker & Sniper}
+------------------------------------------------------
+7. Mighty Deth-Troy-R (N)
+{Nuker & Backliner}
+8. Mighty Kat-A-Pult
+{Sniper & Tanker}
+*Unranked: Mighty Carrowsell
+{?}
+
+[Nature's Guardians - Elemental Pixies] ~ "Anti-Alien Set"
+1. Lumina (L)
+{Tanker & Crowd-Controller}
+2. Bora ($)
+{Midranger(Normal) | Nuker(Evolved/True)}
+3. Gravi
+{Tanker & Waver}
+4. Voli
+{Crowd-Controller}
+5. Mizli
+{Crowd-Controller}
+6. Aer
+{Sniper}
+------------------------------------------------------
+7. Yamii (N)
+{Crowd-Controller}
+*Unranked: Bliza
+{Crowd-Controller & Sniper}
+
+[Girls & Monsters - Angels of Terror]
+1. Kyosaka Nanaho (L, $)
+{Critter & Sniper}
+2. Queen Reika
+{Nuker & Backliner}
+3. Trickster Himeyuri
+{Crowd-Controller}
+4. Sea Maiden Ruri
+{Tanker}
+5. Adventurer Kanna (N)
+{Backliner & Sniper}
+6. Wolfchild Deale
+{Backliner & Crowd-Controller}
+------------------------------------------------------
+7. Graveflower Verbena
+{Critter & Midranger}
+*Unranked: Spectral Goth Vega
+{Midranger & Crowd-Controller}
+
+[Uberfest & Epicfest Exclusives] ~ "Most Busted Set"
+1. Kasli the Bane ($)
+{Sniper & Backliner}
+2. Miko Mitama ($)
+{Midranger(Normal) | Crowd-Controller & Sniper(Evolved)}
+3. Kasli the Scourge ($)
+{Sniper & Crowd-Controller}
+4. D'arktanyan ($)
+{Rusher & Sniper}
+5. D'artanyan ($)
+{Midranger(Normal) | Rusher & Sniper(Evolved)}
+6. Baby Gao ($)
+{Midranger(Normal) | Backliner(Evolved)}
+7. Shadow Gao ($)
+{Nuker}
+8. Iz the Dancer of Grief ($)
+{Midranger}
+9. Iz the Dancer ($)
+{Midranger}
+10. Dark Mitama
+{Crowd-Controller & Sniper}
+11. Dark Aegis Garu
+{Tanker & Midranger}
+12. Baby Garu
+{Melee(Normal) | Tanker & Midranger(Evolved)}
+------------------------------------------------------
