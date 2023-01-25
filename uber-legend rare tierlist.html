@@ -37,21 +37,29 @@
 			src: url("saikyo/SAIKYO.otf");
 		}
 
+		@font-face {
+			font-family: Nasalization;
+			src: url('nasalization-free/nasalization-rg.otf');
+		}
+
 		body {
-			font-family: Atarian;
+			font-family: Nasalization;
 			background-image: url("bg.png");
 			background-size: cover;
 			background-repeat: no-repeat;
-  			background-attachment: fixed;
+			background-attachment: fixed;
+			/*cursor: url("cursor_select.png"), select;*/
 		}
 
 		.rainbow {
-			animation: rainbow 0.4s linear;
+			animation: rainbow 0.6s linear;
 			animation-iteration-count: infinite;
 			font-size: 150%;
 			text-decoration: none;
+			-webkit-text-fill-color: black;
+			-webkit-text-stroke: 0.75px white;
 			padding: 0.6%;
-			border-radius: 4px;
+			border-radius: 0px;
 		}
 
 		@keyframes rainbow {
@@ -278,10 +286,35 @@
 			}
 		}
 
+		.searchselectrainbow {
+			animation: sselect 0.15s linear, rainbow 0.6s linear;
+			animation-iteration-count: infinite;
+			border: 4px solid transparent;
+			font-size: 150%;
+			text-decoration: none;
+			padding: 0.6%;
+			border-radius: 0px;
+		}
+
+		@keyframes sselect {
+
+			100%,
+			0% {
+				border-color: yellow;
+				margin: 4px;
+			}
+
+			50% {
+				border-color: rgb(255, 0, 255);
+				margin: 4px;
+			}
+		}
+
 		.selected {
 			animation: select 0.15s linear;
 			animation-iteration-count: infinite;
 			border: 4px solid transparent;
+			border-radius: 0px;
 		}
 
 		@keyframes select {
@@ -298,6 +331,27 @@
 			}
 		}
 
+		.searchselect {
+			animation: sselect 0.15s linear;
+			animation-iteration-count: infinite;
+			border: 4px solid transparent;
+			border-radius: 0px;
+		}
+
+		@keyframes sselect {
+
+			100%,
+			0% {
+				border-color: yellow;
+				margin: 0px;
+			}
+
+			50% {
+				border-color: rgb(255, 0, 255);
+				margin: 0px;
+			}
+		}
+
 		#ig {
 			border: black;
 			border-radius: 8px;
@@ -306,15 +360,15 @@
 		}
 
 		.uber {
-			color: black;
+			color: white;
 			text-decoration: none;
-			border-radius: 4px;
+			border-radius: 0px;
 			padding: 0.6%;
 			font-size: 125%;
 		}
 
 		.new {
-			color: rgb(0, 119, 101);
+			color: rgb(141, 255, 238);
 		}
 
 		input,
@@ -343,8 +397,8 @@
 		hr {
 			text-align: left;
 			height: 1px;
-			background-color: black;
-			color: black;
+			background-color: white;
+			color: white;
 			width: 100%
 		}
 
@@ -360,10 +414,11 @@
 		display: flex;
 		justify-content: space-between;
 	}*/
+
 		.sidebar {
 			height: 100%;
 			/* Full-height: remove this if you want "auto" height */
-			width: 36%;
+			width: 35.9%;
 			/* Set the width of the sidebar */
 			position: fixed;
 			/* Fixed Sidebar (stay in place on scroll) */
@@ -372,7 +427,7 @@
 			top: 0;
 			/* Stay at the top */
 			right: 0;
-			background-color: rgb(255, 220, 154);
+			background-color: rgba(255, 220, 154, 0.8);
 			/* Black */
 			overflow-x: hidden;
 			/* Disable horizontal scroll */
@@ -394,7 +449,7 @@
 			text-align: center;
 			margin: -24px -8px;
 			padding-top: 4px;
-			background-color: rgba(0, 0, 0, 0.6);
+			background-color: rgba(0, 0, 0, 0.7);
 			color: white;
 			/*border: 5px solid black;*/
 			width: 65%;
@@ -412,8 +467,8 @@
 			float: left;
 		}
 
-		hr{
-			background-color: black;
+		hr {
+			background-color: white;
 			border: none;
 			height: 4px;
 		}
@@ -468,7 +523,7 @@
 		ul input[type=text] {
 			padding: 6px;
 			margin-top: 8px;
-			font-size: 17px;
+			font-size: 14px;
 			border: none;
 			color: black;
 			background-color: rgb(255, 255, 255);
@@ -489,8 +544,22 @@
 			background: #ccc;
 		}
 
-		a{
+		a {
 			color: rgb(139, 168, 255);
+		}
+
+		canvas {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1000;
+			pointer-events: none;
+			background-image: url("bg.png");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
 		}
 
 		.content {
@@ -518,33 +587,43 @@
 			padding: 10px;
 			margin: 20px;
 			text-align: center;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: white;
+		}
+
+		.sets .p {
+			color: white;
+		}
+
+		.sets .input {
+			color: white;
 		}
 
 		.info {
 			border-color: black;
-			border:none;
-			background-color: rgba(0,0,0,0.6);
-			color:white;
+			border: none;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: white;
 		}
 
 		.dynamites {
-			border-color: rgb(255, 34, 0);
-			background-color: rgba(255, 218, 107, 0.7);
+			/*border-color: rgb(255, 34, 0);
+			background-color: rgba(255, 218, 107, 0.7);*/
 		}
 
 		.lugas {
-			border-color: rgb(6, 0, 90);
-			background-color: rgb(214, 138, 255);
+			/*border-color: rgb(6, 0, 90);
+			background-color: rgb(214, 138, 255);*/
 		}
 
 		.wargods {
-			border-color: rgb(45, 0, 74);
-			background-color: rgb(255, 113, 73);
+			/*border-color: rgb(45, 0, 74);
+			background-color: rgb(255, 113, 73);*/
 		}
 
 		.ggals {
-			border-color: rgb(0, 61, 28);
-			background-color: rgb(255, 132, 220);
+			/*border-color: rgb(0, 61, 28);
+			background-color: rgb(255, 132, 220);*/
 		}
 
 		.heroes {
@@ -552,104 +631,138 @@
 			background-size: 100% auto;
 			background-position-y: bottom;*/
 		}
+
+		.dragon {}
+
+		.heroes {}
+
+		.justice {}
+
+		.almighties {}
+
+		.legion {}
+
+		.pixies {}
+
+		.monsters {}
+
+		.exclusives {}
 	</style>
 	<script type="text/javascript">
 		let data = '{ "units": [' +
-			'{"id": "unknown", "form": "basic", "name": "~Unreleased~", "description": "~Unreleased~", "role": "?", "attack": "unknown", "target": "Unknown", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "unknown", "form": "evolved", "name": "~Unreleased~", "description": "~Unreleased~", "role": "?", "attack": "unknown", "target": "Unknown", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "unknown", "form": "true", "name": "~Unreleased~", "description": "~Unreleased~", "role": "?", "attack": "unknown", "target": "Unknown", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "lesserdemon", "form": "basic", "name": "Lesser Demon Cat", "description": "A mad cat that sacrificed itself to a demon from the netherworld. Attacks with extreme force.", "role": "Melee & Nuker", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Weaken-Immune"]}' +
-			',{"id": "lesserdemon", "form": "evolved", "name": "Greater Demon Cat", "description": "The mad cat managed to control the demon from the netherworld. Attacks with extreme force.", "role": "Melee & Nuker", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Weaken-Immune"]}' +
-			',{"id": "lesserdemon", "form": "true", "name": "Greater Balrog Cat", "description": "His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.", "role": "Melee & Nuker", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Weaken-Immune"]}' +
-			',{"id": "momoco", "form": "basic", "name": "Wonder MOMOCO", "description": "Cosmic policegirl hunting interdimensional criminals with lovely plasma beams of justice. Freezes Red/Black/Angels with Wave Attacks.", "role": "Crowd-Controller & Waver", "attack": "area", "target": "Red, Black, Angel", "target_abilities": ["Freeze"], "general_abilities": ["Multi", "Wave","Wave-Immune"]}' +
-			',{"id": "momoco", "form": "evolved", "name": "Cutie MOMOCO", "description": "The galaxy\'s most stylish detective, cleaning up cosmic crime with her cutting edge Cutie Beam. Area attacks freeze Red/Black/Angels.", "role": "Crowd-Controller & Waver", "attack": "area", "target": "Red, Black, Angel", "target_abilities": ["Freeze"], "general_abilities": ["Multi","Wave","Wave-Immune"]}' +
-			',{"id": "ice", "form": "basic", "name": "Ice Cat", "description": "A cat was entranced by a girl hailing from the Land of Ice. It is frozen. Might stop Red enemies. (Area Attack)", "target": "Red", "role": "Crowd-Controller & Midranger", "attack": "area", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "ice", "form": "evolved", "name": "Ice Queen Cat", "description": "Forgot to mention that the Cat is an eternal icicle. Don\'t think it complains much. Might stop Red enemies. (Area Attack)", "role": "Crowd-Controller & Midranger", "attack": "area", "target": "Red", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "ice", "form": "true", "name": "Ice Crystal Cat", "description": "The Ice Queen\'s reign grows more secure and so does her Cat companion\'s crystal shell. Freezes Red enemies in place (Area Attack).", "role": "Crowd-Controller & Backliner", "attack": "area", "target": "Red", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "machine", "form": "basic", "name": "Cat Machine", "description": "Series 1 Weaponized Machine System (MS) developed by the government (Area Attack) Resistant to Red & Alien attacks.", "role": "Tanker", "attack": "area", "target": "Red, Alien", "target_abilities": ["Resistant"], "general_abilities": []}' +
-			',{"id": "machine", "form": "evolved", "name": "Cat Machine Mk 2", "description": "A battle-tested revision MS that managed to escape from the research facility (Area Attack) Resistant to Red & Alien attacks.", "role": "Tanker", "attack": "area", "target": "Red, Alien", "target_abilities": ["Resistant"], "general_abilities": []}' +
-			',{"id": "machine", "form": "true", "name": "Cat Machine Mk 3", "description": "The next generation of battle tech, MS:RX-Ω has slipped into the hands of the Cat Army! Resists Red/Alien attacks, immune to Waves.", "role": "Tanker", "attack": "area", "target": "Red, Alien", "target_abilities": ["Resistant"], "general_abilities": ["Wave-Shield"]}' +
-			',{"id": "marauder", "form": "basic", "name": "Marauder Cat", "description": "Its cursed sword reduces the offensive power but might deliver critical hits. Known as the \\"Metal Killer\\".", "role": "Critter", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
-			',{"id": "marauder", "form": "evolved", "name": "Berserker Cat", "description": "The cursed sword has taken over and turned the Cat into the Cursed Knight. Known as the \\"Dark Metal Knight\\". (Area Atk)", "role": "Critter", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
-			',{"id": "marauder", "form": "true", "name": "Paladin Cat", "description": "This Cat\'s righteous heart finally conquered the cursed sword, turning it into a holy axe. Might critical attack. (Area Attack)", "role": "Critter", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
-			',{"id": "baby", "form": "basic", "name": "Baby Cat", "description": "A baby Cat that still can\'t do anything by itself. Luckily, daddy is there to help. Might knockback Floating & Aliens (Area Atk)", "role": "Nuker & Melee", "attack": "area", "target": "Floating, Alien", "target_abilities": ["Knockback"], "general_abilities": ["Freeze-Immune"]}' +
-			',{"id": "baby", "form": "evolved", "name": "Baby Cats", "description": "Brought along its baby sister. Dad has his work cut out for him. Might knockback Floating & Aliens (Area Atk)", "role": "Nuker & Melee", "attack": "area", "target": "Floating, Alien", "target_abilities": ["Knockback"], "general_abilities": ["Freeze-Immune"]}' +
-			',{"id": "baby", "form": "true", "name": "Cats in the Cradle", "description": "Even 7 kittens together can\'t do much... Luckily Dad\'s still keeping an eye out for bullies. Area wave attacks knockback Floating/Alien.", "role": "Nuker & Melee", "attack": "area", "target": "Floating, Alien", "target_abilities": ["Knockback"], "general_abilities": ["Wave", "Freeze-Immune"]}' +
-			',{"id": "nurse", "form": "basic", "name": "Nurse Cat", "description": "Her warm smile and healing aura take away the sting of her piercing syringe (Area attack) Might knockback/slow Black/Floating enemies.", "role": "?", "attack": "area", "target": "Black, Floating", "target_abilities": ["Slow", "Knockback"], "general_abilities": []}' +
-			',{"id": "nurse", "form": "evolved", "name": "Heartful Nurse Cat", "description": "A battlefield nurse saving lives with a syringe. Defensive power/area increased (Area attack) Might knockback/slow Black/Floating enemies.", "role": "?", "attack": "area", "target": "Black, Floating", "target_abilities": ["Knockback", "Slow"], "general_abilities": []}' +
-			',{"id": "nurse", "form": "true", "name": "Joyful Nurse Cat", "description": "A beloved medic & veteran of many Cat campaigns. Area attacks deliver vital medicine. Might knockback/slow Black/Floating enemies.", "role": "?", "attack": "area", "target": "Black, Floating", "target_abilities": ["Knockback", "Slow"], "general_abilities": []}' +
-			',{"id": "clanheroes", "form": "basic", "name": "Cat Clan Heroes", "description": "A brave band of cats out to defeat the King of Evil. Long-Range Area strikes have chance of Critical. 100% chance to weaken Red, Black, and Floating.", "role": "Crowd-Controller", "attack": "area", "target": "Red, Black, Floating", "target_abilities": ["Weaken"], "general_abilities": ["Critical", "Long-Distance"]}' +
-			',{"id": "clanheroes", "form": "evolved", "name": "Cat Guild Heroes", "description": "The Chosen One and 11 courageous adventurers. Long-Range Area strikes have chance of Critical. 100% chance to weaken Red, Black, and Floating.", "role": "Crowd-Controller", "attack": "area", "target": "Red, Black, Floating", "target_abilities": ["Weaken"], "general_abilities": ["Critical", "Long-Distance"]}' +
-			',{"id": "clanheroes", "form": "true", "name": "Cat Quest Heroes", "description": "Our adventurers take their quest to the skies! Long-range Area strikes have chance of Critical. 100% Weaken vs Red, Black, Floating, Relics.", "role": "Crowd-Controller", "attack": "area", "target": "Red, Black, Floating, Relic", "target_abilities": ["Weaken"], "general_abilities": ["Critical", "Long-Distance", "Curse-Immune"]}' +
-			',{"id": "lasvoss", "form": "basic", "name": "Lasvoss", "description": "Incarnation of evil summoned to eradicate the forces of Good. May strike a Savage Blow imbued with dark power. Survives once, stronger after taking damage.", "role": "Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Savage-Blow", "Weaken-Immune", "Freeze-Immune", "Slow-Immune", "Knockback-Immune", "Curse-Immune", "Warp-Immune", "Wave-Immune"]}' +
-			',{"id": "lasvoss", "form": "evolved", "name": "Ultimate Lasvoss", "description": "His final form, revealed for the final confrontation with the heroes. Smites adventurers with Savage Blows. Survives once, stronger after taking damage.", "role": "Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Savage-Blow", "Weaken-Immune", "Freeze-Immune", "Slow-Immune", "Knockback-Immune", "Curse-Immune", "Warp-Immune", "Wave-Immune"]}' +
-			',{"id": "lasvoss", "form": "true", "name": "Lasvoss Reborn", "description": "Will arise only on the eve of the world\'s destruction. Cloaked in darkness, his claws obliterate naive heroes, leaving no trace of their pitiful existence.", "role": "Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Savage-Blow", "Weaken-Immune", "Freeze-Immune", "Slow-Immune", "Knockback-Immune", "Curse-Immune", "Warp-Immune", "Wave-Immune"]}' +
-			',{"id": "summoner", "form": "basic", "name": "Summoner Satoru", "description": "To save the world, this boy made a pact with the Aku. Commands dark minions for a good cause... for now. Long-range Area attacks, 100% Slow vs Aku", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Aku", "target_abilities": ["Slow"], "general_abilities": ["Long-Distance", "Shield-Piercing", "Surge-Immune"]}' +
-			',{"id": "summoner", "form": "evolved", "name": "Dark Summoner Satoru", "description": "Only a pure desire to save the world keeps Satoru from being corrupted by the magic of the Aku pact. Long-range Area attacks, 100% Slow vs Aku", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Aku", "target_abilities": ["Slow"], "general_abilities": ["Long-Distance", "Shield-Piercing", "Surge-Immune"]}' +
-			',{"id": "tengu", "form": "basic", "name": "Cat Tengu", "description": "Cat that endured all manner of difficult training in the mountains to become a yokai. Colossus Slayer, strong against Red/Angels, sometimes Knockback.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Red, Angel", "target_abilities": ["Strong", "Knockback"], "general_abilities": ["Colossus-Slayer", "Weaken-Immune", "Wave-Immune"]}' +
-			',{"id": "tengu", "form": "evolved", "name": "Grand Yokai Tengu", "description": "Mysterious Cat that awoke its deepest mental faculties with harsh training. Wields fire & wind. Colossus Slayer, strong against Red/Angels, sometimes Knockback.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Red, Angel", "target_abilities": ["Strong", "Knockback"], "general_abilities": ["Strengthen", "Colossus-Slayer", "Weaken-Immune", "Wave-Immune"]}' +
-			',{"id": "lege", "form": "basic", "name": "Legeluga", "description": "Not sure if this is a Cat... There\'s just something about that pandimensional crystal...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "lege", "form": "evolved", "name": "Legelan Pasalan", "description": "Gaze upon its might and tremble! There\'s no doubt that this one is immune to Wave damage (Omni-Strike)", "role": "Rusher", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Omnistrike", "Wave-Immune", "Knockback-Immune", "Freeze-Immune", "Slow-Immune", "Weaken-Immune", "Warp-Immune"]}' +
-			',{"id": "neko", "form": "basic", "name": "Nekoluga", "description": "Not sure if this is a Cat... Maybe if you evolve him...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "neko", "form": "evolved", "name": "Unknown Cat", "description": "God, I don\'t know if this is a Cat anymore. Seriously, I give up. Knockbacks enemies. (Area Atk.)", "role": "Super-Backliner & Crowd-Controller", "attack": "area", "target": "All Except Metal", "target_abilities": ["Knockback"], "general_abilities": []}' +
-			',{"id": "neko", "form": "true", "name": "Ultralan Pasalan", "description": "Tired of scaring children, Luga decided to reinvent himself as that famous masked hero. Freezes and knocks back non-Metal enemies (Area Atk.)", "role": "Super-Backliner & Crowd-Controller", "attack": "area", "target": "All Except Metal", "target_abilities": ["Freeze", "Knockback"], "general_abilities": []}' +
-			',{"id": "asi", "form": "basic", "name": "Asiluga", "description": "Not sure if this is a Cat... There\'s just something about those legs...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "asi", "form": "evolved", "name": "Asilan Pasalan", "description": "Unbelievable, just unbelievable. Seems like this one slows all enemies in range.", "role": "", "attack": "area", "target": "All", "target_abilities": ["Slow"], "general_abilities": []}' +
-			',{"id": "asi", "form": "true", "name": "Assassinlan Pasalan", "description": "Is it a Cat? Or an overly melodramatic comic-book assassin of some kind? Slows enemies with Area Attacks.", "role": "", "attack": "area", "target": "All", "target_abilities": ["Slow"], "general_abilities": []}' +
-			',{"id": "kubi", "form": "basic", "name": "Kubiluga", "description": "Not sure if this is a Cat... There\'s just something about that neck...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "kubi", "form": "evolved", "name": "Kubilan Pasalan", "description": "You can\'t be serious. Really?! Seems like this one knocks back enemies from afar.", "role": "", "attack": "single", "target": "All Except Metal", "target_abilities": ["Knockback"], "general_abilities": ["Wave"]}' +
-			',{"id": "kubi", "form": "true", "name": "E. Kubilan Pasalan", "description": "A mighty sumo wrestler who sharpened his expert skills fighting on the streets. Wave attacks with 100% Critical chance!", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical", "Wave"]}' +
-			',{"id": "teco", "form": "basic", "name": "Tecoluga", "description": "Not sure if this is a Cat... There\'s just something about those arms...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "teco", "form": "evolved", "name": "Tesalan Pasalan", "description": "Are you kidding me?! Seems like this one does massive damage (sometimes critical) to just one enemy.", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
-			',{"id": "teco", "form": "true", "name": "Lufalan Pasalan", "description": "It seems like this one is a straw-hatted pirate of some kind. But we really can\'t be sure. Massive damage vs. one enemy. (Might Crit.)", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
-			',{"id": "bala", "form": "basic", "name": "Balaluga", "description": "Not sure if this is a Cat... There\'s just something about that belly...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "bala", "form": "evolved", "name": "Balalan Pasalan", "description": "No. Way. This can\'t be right... Seems like this one freezes all enemies in range.", "role": "", "attack": "area", "target": "All", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "bala", "form": "true", "name": "Piccolan Pasalan", "description": "A totally unknown extraterrestrial lifeform of unimaginable power... or maybe just a weird Cat? Freezes and weakens all enemies in area atk range.", "role": "", "attack": "area", "target": "All", "target_abilities": ["Freeze", "Weaken"], "general_abilities": []}' +
-			',{"id": "toge", "form": "basic", "name": "Togeluga", "description": "Not sure if this is a Cat... There\'s just something about those... spikes???", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "toge", "form": "evolved", "name": "Togelan Pasalan", "description": "No. Way. This can\'t be right... Survives one lethal strike, get stronger the more damage he takes. (Area Attack)", "role": "", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Wave-Immune"]}' +
-			',{"id": "toge", "form": "true", "name": "Shishilan Pasalan", "description": "Ancient god who bridges the worlds of the living and the dead. Survives once, grows stronger as he takes more damage. (Area Attack)", "role": "", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Wave-Immune"]}' +
-			',{"id": "nobi", "form": "basic", "name": "Nobiluga", "description": "Not sure if this is a Cat... There\'s just something about that cool \'stache...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "nobi", "form": "evolved", "name": "Nobilan Pasalan", "description": "I can\'t stand it anymore... Seems like this one is immune to Wave attacks. (Long Range Area Attack)", "role": "", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Multi", "Long-Distance", "Wave-Immune", "Knockback-Immune", "Freeze-Immune", "Slow-Immune", "Weaken-Immune", "Warp-Immune", "Curse-Immune"]}' +
-			',{"id": "nobi", "form": "true", "name": "Mystican Pasalan", "description": "Monster? Magician? ...Or just a Cat? No one can explain how its powers work. Immune to Wave attacks (Long-Range Area)", "role": "", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Multi", "Long-Distance", "Wave-Immune", "Knockback-Immune", "Freeze-Immune", "Slow-Immune", "Weaken-Immune", "Warp-Immune", "Curse-Immune"]}' +
-			',{"id": "papa", "form": "basic", "name": "Papaluga", "description": "Not sure if this is a Cat... There\'s just something about that toothless smile...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "papa", "form": "evolved", "name": "Papalan Pasalan", "description": "Great googly moogly! Seems like this mysterious old-timer has Area attacks that 100% Curse non-Metal.", "role": "", "attack": "area", "target": "All Except Metal", "target_abilities": ["Curse"], "general_abilities": ["Multi", "Curse-Immune"]}' +
-			',{"id": "papa", "form": "true", "name": "Sukelan Kakulan", "description": "An average pensioner, or a mysterious force of eldritch destruction? Best not to think about it. 100% Curse vs non-Metal, Immune to Surge Attacks.", "role": "", "attack": "area", "target": "All Except Metal", "target_abilities": ["Curse"], "general_abilities": ["Multi", "Curse-Immune", "Surge-Immune"]}' +
-			',{"id": "furi", "form": "basic", "name": "Furiluga", "description": "Not sure if this is a Cat... There\'s just something about those burning locks of hair...", "role": "", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
-			',{"id": "furi", "form": "evolved", "name": "Furilan Pasalan", "description": "Can the world take any more of these?! Seems like this one has Area attacks that 100% Pierce and Barrier Break", "role": "", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Barrier-Breaker", "Shield-Piercing"]}' +
-			',{"id": "musashi", "form": "basic", "name": "Musashi Miyamoto", "description": "A wandering swordsman who has travelled to the realm of carnage to master the Nichirin Blade. Tough vs. / Insane Damage vs. Black.", "role": "", "attack": "single", "target": "Black", "target_abilities": ["Resistant", "Insane-Damage"], "general_abilities": ["Multi"]}' +
-			',{"id": "musashi", "form": "evolved", "name": "Wargod Miyamoto", "description": "The blood on his hands transformed the Nichirin into a cursed Getsurin sword. You have no chance. Tough vs. / Insane Damage vs. Black.", "role": "", "attack": "single", "target": "Black", "target_abilities": ["Resistant", "Insane-Damage"], "general_abilities": ["Multi"]}' +
-			',{"id": "yuki", "form": "basic", "name": "Sanada Yukimura", "description": "A famous warrior that was transformed by the Legendary Cat Armor into a bird-type General. Deals massive damage to Black enemies.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Massive-Damage"], "general_abilities": ["Multi"]}' +
-			',{"id": "yuki", "form": "evolved", "name": "Wargod Yukimura", "description": "Activated the armor\'s hidden function \\"Jet Boosters\\". No stopping it now! Deals massive damage to Black enemies.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Massive-Damage"], "general_abilities": ["Multi"]}' +
-			',{"id": "yuki", "form": "true", "name": "Immortal Yukimura", "description": "Crimson wings carry this wargod through the front lines, tearing them apart without mercy! Deals massive damage to black enemies.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Massive-Damage"], "general_abilities": ["Multi"]}' +
-			',{"id": "keiji", "form": "basic", "name": "Maeda Keiji", "description": "A warrior that was transformed by the Legendary Cat Armour into a Tiger-type General. (Area Attack) Resistant to Black, more damage when hurt.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Resistant"], "general_abilities": ["Strengthen"]}' +
-			',{"id": "keiji", "form": "evolved", "name": "Wargod Keiji", "description": "The Legendary Cat Armor evolved and sprouted a Cherry Tree from his head (Area Attack) Resistant to Black, more damage when hurt.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Resistant"], "general_abilities": ["Strengthen", "Wave-Immune"]}' +
-			',{"id": "keiji", "form": "true", "name": "Immortal Keiji", "description": "As the cherries blossom, so does Keiji\'s battle fury. Resistant to Black, immune to Wave attacks. Area attacks grow stronger as he takes damage.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Resistant"], "general_abilities": ["Strengthen", "Wave-Immune"]}' +
-			',{"id": "oda", "form": "basic", "name": "Oda Nobunaga", "description": "The manifestation of the Grudge of Nobunaga from the lives of many (and one Cat) (Area Attack) Stops the movements of Black enemies.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "oda", "form": "evolved", "name": "Wargod Nobunaga", "description": "The Cat\'s spirit goes into overdrive. The grudge grows even stronger. (Area Attack) Stops the movement of Black enemies.", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "oda", "form": "true", "name": "Immortal Nobunaga", "description": "Leads an army of vengeful spirits to fulfill his dream of unifying the heavens and the netherworld. 100% chance to Freeze Black enemies. (Area)", "role": "", "attack": "area", "target": "Black", "target_abilities": ["Freeze"], "general_abilities": []}' +
-			',{"id": "masamune", "form": "basic", "name": "Date Masamune", "description": "The curse of the Legendary Cat Shield has made him a killing machine. (Area attack) Might knock back Black and Red enemies.", "role": "", "attack": "area", "target": "Red, Black", "target_abilities": ["Knockback"], "general_abilities": []}' +
-			',{"id": "masamune", "form": "evolved", "name": "Wargod Masamune", "description": "Cat Shield\'s Hell Mode - activate! Infernal (Area) attacks slice through his foes! Might knock back Black and Red enemies.", "role": "", "attack": "area", "target": "Red, Black", "target_abilities": ["Knockback"], "general_abilities": []}' +
-			',{"id": "masamune", "form": "true", "name": "Immortal Masamune", "description": "Infernal hatred has fully infused the shield. Karmic blades sweep through all enemies! Area attacks. Knockback Black and Red enemies.", "role": "", "attack": "area", "target": "Red, Black", "target_abilities": ["Knockback"], "general_abilities": []}' +
-			',{"id": "shingen", "form": "basic", "name": "Takeda Shingen", "description": "A master tactician of overwhelming power who is cursed by the Legendary Cat Sword. Area attacks only damage Black/Aliens.", "role": "", "attack": "area", "target": "Black, Alien", "target_abilities": [ "Attacks-Only"], "general_abilities": []}' +
-			',{"id": "shingen", "form": "evolved", "name": "Wargod Shingen", "description": "Cat Sword\'s Tactics Mode - activate! Even greater destructive power! Area attacks only damage Black/Aliens.", "role": "", "attack": "area", "target": "Black, Alien", "target_abilities": [ "Attacks-Only"], "general_abilities": []}' +
-			',{"id": "shingen", "form": "true", "name": "Immortal Shingen", "description": "The Cat Sword\'s path of destruction is unstoppable. There is no mercy to be given. Area attacks only damage Black/Aliens.", "role": "", "attack": "area", "target": "Black, Alien", "target_abilities": [ "Attacks-Only"], "general_abilities": []}' +
-			',{"id": "kenshin", "form": "basic", "name": "Uesugi Kenshin", "description": "Transformed into a dragon through the cursed magic of the Nyanko Engine. (Area attack) Strong + 100% knockback against Black.", "role": "", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Knockback"], "general_abilities": []}' +
-			',{"id": "kenshin", "form": "evolved", "name": "Wargod Kenshin", "description": "Deciding to fully fuse with the Nyanko Engine, the great general gave in to darkness (Area att.) Strong + 100% knockback against Black.", "role": "", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Knockback"], "general_abilities": []}' +
-			',{"id": "kenshin", "form": "true", "name": "Immortal Kenshin", "description": "Totally consumed by corruption. The only emotion remaining is the will to destruction. (Area Attacks) Strong vs + 100% knockback against Black.", "role": "", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Knockback"], "general_abilities": []}' +
-			',{"id": "yoshi", "form": "basic", "name": "Imagawa Yoshimoto", "description": "His impeccable virtue allows him to wield the cursed Cat Fan. Strong against Black, 100% chance to weaken (Long-range)", "role": "", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Weaken"], "general_abilities": [ "Long-Distance"]}' +
-			',{"id": "yoshi", "form": "evolved", "name": "Wargod Yoshimoto", "description": "Possessed by an all-knowing fox spirit, he strikes with golden arrows. Strong vs Black, 100% chance to weaken (Long-range)", "role": "", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Weaken"], "general_abilities": [ "Long-Distance"]}' +
-			',{"id": "yoshi", "form": "true", "name": "Immortal Yoshimoto", "description": "Stained crimson with the blood of his rivals, the Cat Fan burns with an unearthly fire for even greater damage and weakening against Black enemies.", "role": "", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Weaken"], "general_abilities": [ "Long-Distance"]}' +
-			',{"id": "kaihime", "form": "basic", "name": "Narita Kaihime", "description": "This stunning warrior has been blessed with an invincible blade and a resolute body. Slows Black/Zombies, might strike Savage blows.", "role": "", "attack": "area", "target": "Black, Zombie", "target_abilities": [ "Slow"], "general_abilities": [ "Zombie-Killer",  "Savage-Blow"]}' +
-			',{"id": "kaihime", "form": "evolved", "name": "Wargod Kaihime", "description": "Incomparable beauty who mercilessly destroys foes while maintaining perfect composure in battle. Slows Black/Zombies, might strike Savage blows.", "role": "", "attack": "area", "target": "Black, Zombie", "target_abilities": [ "Slow"], "general_abilities": [ "Zombie-Killer",  "Savage-Blow"]}' +
-			',{"id": "kaihime", "form": "true", "name": "Immortal Kaihime", "description": "This dignified heroine has withstood the corruption of the cursed weapons and seeks only to bring peace. 100% Slow vs Black/Zombies, chance of Savage blows.", "role": "", "attack": "area", "target": "Black, Zombie", "target_abilities": [ "Slow"], "general_abilities": [ "Zombie-Killer",  "Savage-Blow"]}' +
-			',{"id": "shiro", "form": "basic", "name": "Shiro Amakusa", "description": "Clockwork creation imbued with a young zealot\'s soul. Driven to bloody battle for his righteous cause. Massive Area damage vs Aku and Black enemies.", "role": "", "attack": "area", "target": "Aku, Black", "target_abilities": [ "Massive-Damage"], "general_abilities": [ "Multi",  "Surge-Immune"]}' +
-			',{"id": "shiro", "form": "evolved", "name": "Wargod Amakusa", "description": "His endless crusade has stained his own spirit, turning him into a vengeful wraith of slaughter. Massive Area damage vs Aku and Black enemies.", "role": "", "attack": "area", "target": "Aku, Black", "target_abilities": [ "Massive-Damage"], "general_abilities": [ "Multi",  "Surge-Immune"]}' +
-			',{"id": "shiro", "form": "true", "name": "Immortal Amakusa", "description": "Embodiment of grudges and rage on the battlefield. Houses vengeful hellfire that will bring the world to ruin. Massive Area damage vs Aku and Black enemies.", "role": "", "attack": "area", "target": "Aku, Black", "target_abilities": [ "Massive-Damage"], "general_abilities": [ "Multi",  "Surge-Immune"]}' +
-			',{"id": "hanzo", "form": "basic", "name": "Hattori Hanzo", "description": "Ninja transformed into a panther by a cursed iaito. One swift strike, and the mission is complete. Colossus Slayer, Massive damage to Black/Floating, 100% Freeze.", "role": "", "attack": "area", "target": "Floating, Black", "target_abilities": [ "Freeze",  "Massive-Damage"], "general_abilities": [ "Colossus-Slayer",  "Freeze-Immune",  "Slow-Immune"]}' +
-			',{"id": "hanzo", "form": "evolved", "name": "Wargod Hanzo", "description": "Peerless assassin who cuts down targets with godspeed, unleashing the power of his cursed blade. Colossus Slayer, massive damage to Black/Floating, 100% Freeze.", "role": "", "attack": "area", "target": "Floating, Black", "target_abilities": [ "Freeze",  "Massive-Damage"], "general_abilities": [ "Colossus-Slayer",  "Freeze-Immune",  "Slow-Immune"]}' +
+			'{"id": "unknown", "form": "basic", "rarity": "Uber Rare", "name": "~Unreleased~", "description": "~Unreleased~", "role": "?", "attack": "unknown", "target": "Unknown", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "unknown", "form": "evolved", "rarity": "Uber Rare", "name": "~Unreleased~", "description": "~Unreleased~", "role": "?", "attack": "unknown", "target": "Unknown", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "unknown", "form": "true", "rarity": "Uber Rare", "name": "~Unreleased~", "description": "~Unreleased~", "role": "?", "attack": "unknown", "target": "Unknown", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "lesserdemon", "form": "basic", "rarity": "Uber Rare", "name": "Lesser Demon Cat", "description": "A mad cat that sacrificed itself to a demon from the netherworld. Attacks with extreme force.", "role": "Melee & Nuker", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Weaken-Immune"]}' +
+			',{"id": "lesserdemon", "form": "evolved", "rarity": "Uber Rare", "name": "Greater Demon Cat", "description": "The mad cat managed to control the demon from the netherworld. Attacks with extreme force.", "role": "Melee & Nuker", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Weaken-Immune"]}' +
+			',{"id": "lesserdemon", "form": "true", "rarity": "Uber Rare", "name": "Greater Balrog Cat", "description": "His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.", "role": "Melee & Nuker", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Weaken-Immune"]}' +
+			',{"id": "momoco", "form": "basic", "rarity": "Legend Rare", "name": "Wonder MOMOCO", "description": "Cosmic policegirl hunting interdimensional criminals with lovely plasma beams of justice. Freezes Red/Black/Angels with Wave Attacks.", "role": "Crowd-Controller & Waver", "attack": "area", "target": "Red, Black, Angel", "target_abilities": ["Freeze"], "general_abilities": ["Multi", "Wave","Wave-Immune"]}' +
+			',{"id": "momoco", "form": "evolved", "rarity": "Legend Rare", "name": "Cutie MOMOCO", "description": "The galaxy\'s most stylish detective, cleaning up cosmic crime with her cutting edge Cutie Beam. Area attacks freeze Red/Black/Angels.", "role": "Crowd-Controller & Waver", "attack": "area", "target": "Red, Black, Angel", "target_abilities": ["Freeze"], "general_abilities": ["Multi","Wave","Wave-Immune"]}' +
+			',{"id": "ice", "form": "basic", "rarity": "Uber Rare", "name": "Ice Cat", "description": "A cat was entranced by a girl hailing from the Land of Ice. It is frozen. Might stop Red enemies. (Area Attack)", "target": "Red", "role": "Crowd-Controller & Midranger", "attack": "area", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "ice", "form": "evolved", "rarity": "Uber Rare", "name": "Ice Queen Cat", "description": "Forgot to mention that the Cat is an eternal icicle. Don\'t think it complains much. Might stop Red enemies. (Area Attack)", "role": "Crowd-Controller & Midranger", "attack": "area", "target": "Red", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "ice", "form": "true", "rarity": "Uber Rare", "name": "Ice Crystal Cat", "description": "The Ice Queen\'s reign grows more secure and so does her Cat companion\'s crystal shell. Freezes Red enemies in place (Area Attack).", "role": "Crowd-Controller & Backliner", "attack": "area", "target": "Red", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "machine", "form": "basic", "rarity": "Uber Rare", "name": "Cat Machine", "description": "Series 1 Weaponized Machine System (MS) developed by the government (Area Attack) Resistant to Red & Alien attacks.", "role": "Tanker", "attack": "area", "target": "Red, Alien", "target_abilities": ["Resistant"], "general_abilities": []}' +
+			',{"id": "machine", "form": "evolved", "rarity": "Uber Rare", "name": "Cat Machine Mk 2", "description": "A battle-tested revision MS that managed to escape from the research facility (Area Attack) Resistant to Red & Alien attacks.", "role": "Tanker", "attack": "area", "target": "Red, Alien", "target_abilities": ["Resistant"], "general_abilities": []}' +
+			',{"id": "machine", "form": "true", "rarity": "Uber Rare", "name": "Cat Machine Mk 3", "description": "The next generation of battle tech, MS:RX-Ω has slipped into the hands of the Cat Army! Resists Red/Alien attacks, immune to Waves.", "role": "Tanker", "attack": "area", "target": "Red, Alien", "target_abilities": ["Resistant"], "general_abilities": ["Wave-Shield"]}' +
+			',{"id": "marauder", "form": "basic", "rarity": "Uber Rare", "name": "Marauder Cat", "description": "Its cursed sword reduces the offensive power but might deliver critical hits. Known as the \\"Metal Killer\\".", "role": "Critter", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
+			',{"id": "marauder", "form": "evolved", "rarity": "Uber Rare", "name": "Berserker Cat", "description": "The cursed sword has taken over and turned the Cat into the Cursed Knight. Known as the \\"Dark Metal Knight\\". (Area Atk)", "role": "Critter", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
+			',{"id": "marauder", "form": "true", "rarity": "Uber Rare", "name": "Paladin Cat", "description": "This Cat\'s righteous heart finally conquered the cursed sword, turning it into a holy axe. Might critical attack. (Area Attack)", "role": "Critter", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
+			',{"id": "baby", "form": "basic", "rarity": "Uber Rare", "name": "Baby Cat", "description": "A baby Cat that still can\'t do anything by itself. Luckily, daddy is there to help. Might knockback Floating & Aliens (Area Atk)", "role": "Nuker & Melee", "attack": "area", "target": "Floating, Alien", "target_abilities": ["Knockback"], "general_abilities": ["Freeze-Immune"]}' +
+			',{"id": "baby", "form": "evolved", "rarity": "Uber Rare", "name": "Baby Cats", "description": "Brought along its baby sister. Dad has his work cut out for him. Might knockback Floating & Aliens (Area Atk)", "role": "Nuker & Melee", "attack": "area", "target": "Floating, Alien", "target_abilities": ["Knockback"], "general_abilities": ["Freeze-Immune"]}' +
+			',{"id": "baby", "form": "true", "rarity": "Uber Rare", "name": "Cats in the Cradle", "description": "Even 7 kittens together can\'t do much... Luckily Dad\'s still keeping an eye out for bullies. Area wave attacks knockback Floating/Alien.", "role": "Nuker & Melee", "attack": "area", "target": "Floating, Alien", "target_abilities": ["Knockback"], "general_abilities": ["Wave", "Freeze-Immune"]}' +
+			',{"id": "nurse", "form": "basic", "rarity": "Uber Rare", "name": "Nurse Cat", "description": "Her warm smile and healing aura take away the sting of her piercing syringe (Area attack) Might knockback/slow Black/Floating enemies.", "role": "?", "attack": "area", "target": "Black, Floating", "target_abilities": ["Slow", "Knockback"], "general_abilities": []}' +
+			',{"id": "nurse", "form": "evolved", "rarity": "Uber Rare", "name": "Heartful Nurse Cat", "description": "A battlefield nurse saving lives with a syringe. Defensive power/area increased (Area attack) Might knockback/slow Black/Floating enemies.", "role": "?", "attack": "area", "target": "Black, Floating", "target_abilities": ["Knockback", "Slow"], "general_abilities": []}' +
+			',{"id": "nurse", "form": "true", "rarity": "Uber Rare", "name": "Joyful Nurse Cat", "description": "A beloved medic & veteran of many Cat campaigns. Area attacks deliver vital medicine. Might knockback/slow Black/Floating enemies.", "role": "?", "attack": "area", "target": "Black, Floating", "target_abilities": ["Knockback", "Slow"], "general_abilities": []}' +
+			',{"id": "clanheroes", "form": "basic", "rarity": "Uber Rare", "name": "Cat Clan Heroes", "description": "A brave band of cats out to defeat the King of Evil. Long-Range Area strikes have chance of Critical. 100% chance to weaken Red, Black, and Floating.", "role": "Crowd-Controller", "attack": "area", "target": "Red, Black, Floating", "target_abilities": ["Weaken"], "general_abilities": ["Critical", "Long-Distance"]}' +
+			',{"id": "clanheroes", "form": "evolved", "rarity": "Uber Rare", "name": "Cat Guild Heroes", "description": "The Chosen One and 11 courageous adventurers. Long-Range Area strikes have chance of Critical. 100% chance to weaken Red, Black, and Floating.", "role": "Crowd-Controller", "attack": "area", "target": "Red, Black, Floating", "target_abilities": ["Weaken"], "general_abilities": ["Critical", "Long-Distance"]}' +
+			',{"id": "clanheroes", "form": "true", "rarity": "Uber Rare", "name": "Cat Quest Heroes", "description": "Our adventurers take their quest to the skies! Long-range Area strikes have chance of Critical. 100% Weaken vs Red, Black, Floating, Relics.", "role": "Crowd-Controller", "attack": "area", "target": "Red, Black, Floating, Relic", "target_abilities": ["Weaken"], "general_abilities": ["Critical", "Long-Distance", "Curse-Immune"]}' +
+			',{"id": "lasvoss", "form": "basic", "rarity": "Uber Rare", "name": "Lasvoss", "description": "Incarnation of evil summoned to eradicate the forces of Good. May strike a Savage Blow imbued with dark power. Survives once, stronger after taking damage.", "role": "Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Savage-Blow", "Weaken-Immune", "Freeze-Immune", "Slow-Immune", "Knockback-Immune", "Curse-Immune", "Warp-Immune", "Wave-Immune"]}' +
+			',{"id": "lasvoss", "form": "evolved", "rarity": "Uber Rare", "name": "Ultimate Lasvoss", "description": "His final form, revealed for the final confrontation with the heroes. Smites adventurers with Savage Blows. Survives once, stronger after taking damage.", "role": "Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Savage-Blow", "Weaken-Immune", "Freeze-Immune", "Slow-Immune", "Knockback-Immune", "Curse-Immune", "Warp-Immune", "Wave-Immune"]}' +
+			',{"id": "lasvoss", "form": "true", "rarity": "Uber Rare", "name": "Lasvoss Reborn", "description": "Will arise only on the eve of the world\'s destruction. Cloaked in darkness, his claws obliterate naive heroes, leaving no trace of their pitiful existence.", "role": "Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Savage-Blow", "Weaken-Immune", "Freeze-Immune", "Slow-Immune", "Knockback-Immune", "Curse-Immune", "Warp-Immune", "Wave-Immune"]}' +
+			',{"id": "summoner", "form": "basic", "rarity": "Uber Rare", "name": "Summoner Satoru", "description": "To save the world, this boy made a pact with the Aku. Commands dark minions for a good cause... for now. Long-range Area attacks, 100% Slow vs Aku", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Aku", "target_abilities": ["Slow"], "general_abilities": ["Long-Distance", "Shield-Piercing", "Surge-Immune"]}' +
+			',{"id": "summoner", "form": "evolved", "rarity": "Uber Rare", "name": "Dark Summoner Satoru", "description": "Only a pure desire to save the world keeps Satoru from being corrupted by the magic of the Aku pact. Long-range Area attacks, 100% Slow vs Aku", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Aku", "target_abilities": ["Slow"], "general_abilities": ["Long-Distance", "Shield-Piercing", "Surge-Immune"]}' +
+			',{"id": "tengu", "form": "basic", "rarity": "Uber Rare", "name": "Cat Tengu", "description": "Cat that endured all manner of difficult training in the mountains to become a yokai. Colossus Slayer, strong against Red/Angels, sometimes Knockback.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Red, Angel", "target_abilities": ["Strong", "Knockback"], "general_abilities": ["Colossus-Slayer", "Weaken-Immune", "Wave-Immune"]}' +
+			',{"id": "tengu", "form": "evolved", "rarity": "Uber Rare", "name": "Grand Yokai Tengu", "description": "Mysterious Cat that awoke its deepest mental faculties with harsh training. Wields fire & wind. Colossus Slayer, strong against Red/Angels, sometimes Knockback.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Red, Angel", "target_abilities": ["Strong", "Knockback"], "general_abilities": ["Strengthen", "Colossus-Slayer", "Weaken-Immune", "Wave-Immune"]}' +
+			',{"id": "lege", "form": "basic", "rarity": "Legend Rare", "name": "Legeluga", "description": "Not sure if this is a Cat... There\'s just something about that pandimensional crystal...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "lege", "form": "evolved", "rarity": "Legend Rare", "name": "Legelan Pasalan", "description": "Gaze upon its might and tremble! There\'s no doubt that this one is immune to Wave damage (Omni-Strike)", "role": "Rusher", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Omnistrike", "Wave-Immune", "Knockback-Immune", "Freeze-Immune", "Slow-Immune", "Weaken-Immune", "Warp-Immune"]}' +
+			',{"id": "neko", "form": "basic", "rarity": "Uber Rare", "name": "Nekoluga", "description": "Not sure if this is a Cat... Maybe if you evolve him...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "neko", "form": "evolved", "rarity": "Uber Rare", "name": "Unknown Cat", "description": "God, I don\'t know if this is a Cat anymore. Seriously, I give up. Knockbacks enemies. (Area Atk.)", "role": "Super-Backliner & Crowd-Controller", "attack": "area", "target": "All Except Metal", "target_abilities": ["Knockback"], "general_abilities": []}' +
+			',{"id": "neko", "form": "true", "rarity": "Uber Rare", "name": "Ultralan Pasalan", "description": "Tired of scaring children, Luga decided to reinvent himself as that famous masked hero. Freezes and knocks back non-Metal enemies (Area Atk.)", "role": "Super-Backliner & Crowd-Controller", "attack": "area", "target": "All Except Metal", "target_abilities": ["Freeze", "Knockback"], "general_abilities": []}' +
+			',{"id": "asi", "form": "basic", "rarity": "Uber Rare", "name": "Asiluga", "description": "Not sure if this is a Cat... There\'s just something about those legs...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "asi", "form": "evolved", "rarity": "Uber Rare", "name": "Asilan Pasalan", "description": "Unbelievable, just unbelievable. Seems like this one slows all enemies in range.", "role": "Crowd-Controller & Super-Backliner", "attack": "area", "target": "All", "target_abilities": ["Slow"], "general_abilities": []}' +
+			',{"id": "asi", "form": "true", "rarity": "Uber Rare", "name": "Assassinlan Pasalan", "description": "Is it a Cat? Or an overly melodramatic comic-book assassin of some kind? Slows enemies with Area Attacks.", "role": "Crowd-Controller & Super-Backliner", "attack": "area", "target": "All", "target_abilities": ["Slow"], "general_abilities": []}' +
+			',{"id": "kubi", "form": "basic", "rarity": "Uber Rare", "name": "Kubiluga", "description": "Not sure if this is a Cat... There\'s just something about that neck...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "kubi", "form": "evolved", "rarity": "Uber Rare", "name": "Kubilan Pasalan", "description": "You can\'t be serious. Really?! Seems like this one knocks back enemies from afar.", "role": "Backliner & Crowd-Controller", "attack": "single", "target": "All Except Metal", "target_abilities": ["Knockback"], "general_abilities": ["Wave"]}' +
+			',{"id": "kubi", "form": "true", "rarity": "Uber Rare", "name": "E. Kubilan Pasalan", "description": "A mighty sumo wrestler who sharpened his expert skills fighting on the streets. Wave attacks with 100% Critical chance!", "role": "Backliner & Critter", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical", "Wave"]}' +
+			',{"id": "teco", "form": "basic", "rarity": "Uber Rare", "name": "Tecoluga", "description": "Not sure if this is a Cat... There\'s just something about those arms...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "teco", "form": "evolved", "rarity": "Uber Rare", "name": "Tesalan Pasalan", "description": "Are you kidding me?! Seems like this one does massive damage (sometimes critical) to just one enemy.", "role": "Nuker & Super-Backliner", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
+			',{"id": "teco", "form": "true", "rarity": "Uber Rare", "name": "Lufalan Pasalan", "description": "It seems like this one is a straw-hatted pirate of some kind. But we really can\'t be sure. Massive damage vs. one enemy. (Might Crit.)", "role": "Nuker & Super-Backliner", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": ["Critical"]}' +
+			',{"id": "bala", "form": "basic", "rarity": "Uber Rare", "name": "Balaluga", "description": "Not sure if this is a Cat... There\'s just something about that belly...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "bala", "form": "evolved", "rarity": "Uber Rare", "name": "Balalan Pasalan", "description": "No. Way. This can\'t be right... Seems like this one freezes all enemies in range.", "role": "Crowd-Controller & Super-Backliner", "attack": "area", "target": "All", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "bala", "form": "true", "rarity": "Uber Rare", "name": "Piccolan Pasalan", "description": "A totally unknown extraterrestrial lifeform of unimaginable power... or maybe just a weird Cat? Freezes and weakens all enemies in area atk range.", "role": "Crowd-Controller & Super-Backliner", "attack": "area", "target": "All", "target_abilities": ["Freeze", "Weaken"], "general_abilities": []}' +
+			',{"id": "toge", "form": "basic", "rarity": "Uber Rare", "name": "Togeluga", "description": "Not sure if this is a Cat... There\'s just something about those... spikes???", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "toge", "form": "evolved", "rarity": "Uber Rare", "name": "Togelan Pasalan", "description": "No. Way. This can\'t be right... Survives one lethal strike, get stronger the more damage he takes. (Area Attack)", "role": "Backliner & Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Wave-Immune"]}' +
+			',{"id": "toge", "form": "true", "rarity": "Uber Rare", "name": "Shishilan Pasalan", "description": "Ancient god who bridges the worlds of the living and the dead. Survives once, grows stronger as he takes more damage. (Area Attack)", "role": "Backliner & Nuker", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Strengthen", "Survive", "Wave-Immune"]}' +
+			',{"id": "nobi", "form": "basic", "rarity": "Uber Rare", "name": "Nobiluga", "description": "Not sure if this is a Cat... There\'s just something about that cool \'stache...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "nobi", "form": "evolved", "rarity": "Uber Rare", "name": "Nobilan Pasalan", "description": "I can\'t stand it anymore... Seems like this one is immune to Wave attacks. (Long Range Area Attack)", "role": "Sniper", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Multi", "Long-Distance", "Wave-Immune", "Knockback-Immune", "Freeze-Immune", "Slow-Immune", "Weaken-Immune", "Warp-Immune", "Curse-Immune"]}' +
+			',{"id": "nobi", "form": "true", "rarity": "Uber Rare", "name": "Mystican Pasalan", "description": "Monster? Magician? ...Or just a Cat? No one can explain how its powers work. Immune to Wave attacks (Long-Range Area)", "role": "Sniper", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Multi", "Long-Distance", "Wave-Immune", "Knockback-Immune", "Freeze-Immune", "Slow-Immune", "Weaken-Immune", "Warp-Immune", "Curse-Immune"]}' +
+			',{"id": "papa", "form": "basic", "rarity": "Uber Rare", "name": "Papaluga", "description": "Not sure if this is a Cat... There\'s just something about that toothless smile...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "papa", "form": "evolved", "rarity": "Uber Rare", "name": "Papalan Pasalan", "description": "Great googly moogly! Seems like this mysterious old-timer has Area attacks that 100% Curse non-Metal.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "All Except Metal", "target_abilities": ["Curse"], "general_abilities": ["Multi", "Curse-Immune"]}' +
+			',{"id": "papa", "form": "true", "rarity": "Uber Rare", "name": "Sukelan Kakulan", "description": "An average pensioner, or a mysterious force of eldritch destruction? Best not to think about it. 100% Curse vs non-Metal, Immune to Surge Attacks.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "All Except Metal", "target_abilities": ["Curse"], "general_abilities": ["Multi", "Curse-Immune", "Surge-Immune"]}' +
+			',{"id": "furi", "form": "basic", "rarity": "Uber Rare", "name": "Furiluga", "description": "Not sure if this is a Cat... There\'s just something about those burning locks of hair...", "role": "None", "attack": "single", "target": "None", "target_abilities": [], "general_abilities": []}' +
+			',{"id": "furi", "form": "evolved", "rarity": "Uber Rare", "name": "Furilan Pasalan", "description": "Can the world take any more of these?! Seems like this one has Area attacks that 100% Pierce and Barrier Break", "role": "Breaker & Super-Backliner", "attack": "area", "target": "None", "target_abilities": [], "general_abilities": ["Barrier-Breaker", "Shield-Piercing"]}' +
+			',{"id": "musashi", "form": "basic", "rarity": "Legend Rare", "name": "Musashi Miyamoto", "description": "A wandering swordsman who has travelled to the realm of carnage to master the Nichirin Blade. Tough vs. / Insane Damage vs. Black.", "role": "Nuker", "attack": "single", "target": "Black", "target_abilities": ["Resistant", "Insane-Damage"], "general_abilities": ["Multi"]}' +
+			',{"id": "musashi", "form": "evolved", "rarity": "Legend Rare", "name": "Wargod Miyamoto", "description": "The blood on his hands transformed the Nichirin into a cursed Getsurin sword. You have no chance. Tough vs. / Insane Damage vs. Black.", "role": "Nuker", "attack": "single", "target": "Black", "target_abilities": ["Resistant", "Insane-Damage"], "general_abilities": ["Multi"]}' +
+			',{"id": "yuki", "form": "basic", "rarity": "Uber Rare", "name": "Sanada Yukimura", "description": "A famous warrior that was transformed by the Legendary Cat Armor into a bird-type General. Deals massive damage to Black enemies.", "role": "Rusher & Nuker", "attack": "area", "target": "Black", "target_abilities": ["Massive-Damage"], "general_abilities": ["Multi"]}' +
+			',{"id": "yuki", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Yukimura", "description": "Activated the armor\'s hidden function \\"Jet Boosters\\". No stopping it now! Deals massive damage to Black enemies.", "role": "Rusher & Nuker", "attack": "area", "target": "Black", "target_abilities": ["Massive-Damage"], "general_abilities": ["Multi"]}' +
+			',{"id": "yuki", "form": "true", "rarity": "Uber Rare", "name": "Immortal Yukimura", "description": "Crimson wings carry this wargod through the front lines, tearing them apart without mercy! Deals massive damage to black enemies.", "role": "Rusher & Nuker", "attack": "area", "target": "Black", "target_abilities": ["Massive-Damage"], "general_abilities": ["Multi"]}' +
+			',{"id": "keiji", "form": "basic", "rarity": "Uber Rare", "name": "Maeda Keiji", "description": "A warrior that was transformed by the Legendary Cat Armour into a Tiger-type General. (Area Attack) Resistant to Black, more damage when hurt.", "role": "Midranger & Tanker", "attack": "area", "target": "Black", "target_abilities": ["Resistant"], "general_abilities": ["Strengthen"]}' +
+			',{"id": "keiji", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Keiji", "description": "The Legendary Cat Armor evolved and sprouted a Cherry Tree from his head (Area Attack) Resistant to Black, more damage when hurt.", "role": "Midranger & Tanker", "attack": "area", "target": "Black", "target_abilities": ["Resistant"], "general_abilities": ["Strengthen", "Wave-Immune"]}' +
+			',{"id": "keiji", "form": "true", "rarity": "Uber Rare", "name": "Immortal Keiji", "description": "As the cherries blossom, so does Keiji\'s battle fury. Resistant to Black, immune to Wave attacks. Area attacks grow stronger as he takes damage.", "role": "Midranger & Tanker", "attack": "area", "target": "Black", "target_abilities": ["Resistant"], "general_abilities": ["Strengthen", "Wave-Immune"]}' +
+			',{"id": "oda", "form": "basic", "rarity": "Uber Rare", "name": "Oda Nobunaga", "description": "The manifestation of the Grudge of Nobunaga from the lives of many (and one Cat) (Area Attack) Stops the movements of Black enemies.", "role": "Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "oda", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Nobunaga", "description": "The Cat\'s spirit goes into overdrive. The grudge grows even stronger. (Area Attack) Stops the movement of Black enemies.", "role": "Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "oda", "form": "true", "rarity": "Uber Rare", "name": "Immortal Nobunaga", "description": "Leads an army of vengeful spirits to fulfill his dream of unifying the heavens and the netherworld. 100% chance to Freeze Black enemies. (Area)", "role": "Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": ["Freeze"], "general_abilities": []}' +
+			',{"id": "masamune", "form": "basic", "rarity": "Uber Rare", "name": "Date Masamune", "description": "The curse of the Legendary Cat Shield has made him a killing machine. (Area attack) Might knock back Black and Red enemies.", "role": "Crowd-Controller & Midranger", "attack": "area", "target": "Red, Black", "target_abilities": ["Knockback"], "general_abilities": []}' +
+			',{"id": "masamune", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Masamune", "description": "Cat Shield\'s Hell Mode - activate! Infernal (Area) attacks slice through his foes! Might knock back Black and Red enemies.", "role": "Crowd-Controller & Midranger", "attack": "area", "target": "Red, Black", "target_abilities": ["Knockback"], "general_abilities": []}' +
+			',{"id": "masamune", "form": "true", "rarity": "Uber Rare", "name": "Immortal Masamune", "description": "Infernal hatred has fully infused the shield. Karmic blades sweep through all enemies! Area attacks. Knockback Black and Red enemies.", "role": "Crowd-Controller & Backliner", "attack": "area", "target": "Red, Black", "target_abilities": ["Knockback"], "general_abilities": []}' +
+			',{"id": "shingen", "form": "basic", "rarity": "Uber Rare", "name": "Takeda Shingen", "description": "A master tactician of overwhelming power who is cursed by the Legendary Cat Sword. Area attacks only damage Black/Aliens.", "role": "Nuker", "attack": "area", "target": "Black, Alien", "target_abilities": [ "Attacks-Only"], "general_abilities": []}' +
+			',{"id": "shingen", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Shingen", "description": "Cat Sword\'s Tactics Mode - activate! Even greater destructive power! Area attacks only damage Black/Aliens.", "role": "Nuker", "attack": "area", "target": "Black, Alien", "target_abilities": [ "Attacks-Only"], "general_abilities": []}' +
+			',{"id": "shingen", "form": "true", "rarity": "Uber Rare", "name": "Immortal Shingen", "description": "The Cat Sword\'s path of destruction is unstoppable. There is no mercy to be given. Area attacks only damage Black/Aliens.", "role": "Nuker", "attack": "area", "target": "Black, Alien", "target_abilities": [ "Attacks-Only"], "general_abilities": []}' +
+			',{"id": "kenshin", "form": "basic", "rarity": "Uber Rare", "name": "Uesugi Kenshin", "description": "Transformed into a dragon through the cursed magic of the Nyanko Engine. (Area attack) Strong + 100% knockback against Black.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Knockback"], "general_abilities": []}' +
+			',{"id": "kenshin", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Kenshin", "description": "Deciding to fully fuse with the Nyanko Engine, the great general gave in to darkness (Area att.) Strong + 100% knockback against Black.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Knockback"], "general_abilities": []}' +
+			',{"id": "kenshin", "form": "true", "rarity": "Uber Rare", "name": "Immortal Kenshin", "description": "Totally consumed by corruption. The only emotion remaining is the will to destruction. (Area Attacks) Strong vs + 100% knockback against Black.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Knockback"], "general_abilities": []}' +
+			',{"id": "yoshi", "form": "basic", "rarity": "Uber Rare", "name": "Imagawa Yoshimoto", "description": "His impeccable virtue allows him to wield the cursed Cat Fan. Strong against Black, 100% chance to weaken (Long-range)", "role": "Sniper & Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Weaken"], "general_abilities": [ "Long-Distance"]}' +
+			',{"id": "yoshi", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Yoshimoto", "description": "Possessed by an all-knowing fox spirit, he strikes with golden arrows. Strong vs Black, 100% chance to weaken (Long-range)", "role": "Sniper & Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Weaken"], "general_abilities": [ "Long-Distance"]}' +
+			',{"id": "yoshi", "form": "true", "rarity": "Uber Rare", "name": "Immortal Yoshimoto", "description": "Stained crimson with the blood of his rivals, the Cat Fan burns with an unearthly fire for even greater damage and weakening against Black enemies.", "role": "Sniper & Crowd-Controller", "attack": "area", "target": "Black", "target_abilities": [ "Strong",  "Weaken"], "general_abilities": [ "Long-Distance"]}' +
+			',{"id": "kaihime", "form": "basic", "rarity": "Uber Rare", "name": "Narita Kaihime", "description": "This stunning warrior has been blessed with an invincible blade and a resolute body. Slows Black/Zombies, might strike Savage blows.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Black, Zombie", "target_abilities": [ "Slow"], "general_abilities": [ "Zombie-Killer",  "Savage-Blow"]}' +
+			',{"id": "kaihime", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Kaihime", "description": "Incomparable beauty who mercilessly destroys foes while maintaining perfect composure in battle. Slows Black/Zombies, might strike Savage blows.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Black, Zombie", "target_abilities": [ "Slow"], "general_abilities": [ "Zombie-Killer",  "Savage-Blow"]}' +
+			',{"id": "kaihime", "form": "true", "rarity": "Uber Rare", "name": "Immortal Kaihime", "description": "This dignified heroine has withstood the corruption of the cursed weapons and seeks only to bring peace. 100% Slow vs Black/Zombies, chance of Savage blows.", "role": "Backliner & Crowd-Controller", "attack": "area", "target": "Black, Zombie", "target_abilities": [ "Slow"], "general_abilities": [ "Zombie-Killer",  "Savage-Blow"]}' +
+			',{"id": "shiro", "form": "basic", "rarity": "Uber Rare", "name": "Shiro Amakusa", "description": "Clockwork creation imbued with a young zealot\'s soul. Driven to bloody battle for his righteous cause. Massive Area damage vs Aku and Black enemies.", "role": "?", "attack": "area", "target": "Aku, Black", "target_abilities": [ "Massive-Damage"], "general_abilities": [ "Multi",  "Surge-Immune"]}' +
+			',{"id": "shiro", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Amakusa", "description": "His endless crusade has stained his own spirit, turning him into a vengeful wraith of slaughter. Massive Area damage vs Aku and Black enemies.", "role": "?", "attack": "area", "target": "Aku, Black", "target_abilities": [ "Massive-Damage"], "general_abilities": [ "Multi",  "Surge-Immune"]}' +
+			',{"id": "shiro", "form": "true", "rarity": "Uber Rare", "name": "Immortal Amakusa", "description": "Embodiment of grudges and rage on the battlefield. Houses vengeful hellfire that will bring the world to ruin. Massive Area damage vs Aku and Black enemies.", "role": "?", "attack": "area", "target": "Aku, Black", "target_abilities": [ "Massive-Damage"], "general_abilities": [ "Multi",  "Surge-Immune"]}' +
+			',{"id": "hanzo", "form": "basic", "rarity": "Uber Rare", "name": "Hattori Hanzo", "description": "Ninja transformed into a panther by a cursed iaito. One swift strike, and the mission is complete. Colossus Slayer, Massive damage to Black/Floating, 100% Freeze.", "role": "?", "attack": "area", "target": "Floating, Black", "target_abilities": [ "Freeze",  "Massive-Damage"], "general_abilities": [ "Colossus-Slayer",  "Freeze-Immune",  "Slow-Immune"]}' +
+			',{"id": "hanzo", "form": "evolved", "rarity": "Uber Rare", "name": "Wargod Hanzo", "description": "Peerless assassin who cuts down targets with godspeed, unleashing the power of his cursed blade. Colossus Slayer, massive damage to Black/Floating, 100% Freeze.", "role": "?", "attack": "area", "target": "Floating, Black", "target_abilities": [ "Freeze",  "Massive-Damage"], "general_abilities": [ "Colossus-Slayer",  "Freeze-Immune",  "Slow-Immune"]}' +
+			',{"id": "jeanne", "form": "basic", "rarity": "Legend Rare", "name": "Headmistress Jeanne", "description": "Chairwoman of the Cyber Academy, respected by all. Summons ethereal spears to punish bad students. Insane damage to Red/Floating. (Long-Range/Area)", "role": "Nuker & Sniper", "attack": "area", "target": "Red, Floating", "target_abilities": [ "Insane-Damage"], "general_abilities": [ "Long-Distance"] }' +
+			',{"id": "jeanne", "form": "evolved", "rarity": "Legend Rare", "name": "Headmistress Jeanne ψ", "description": "Her educational philosophy has become more... unforgiving lately. But who\'s going to complain? Insane damage to Red/Floating. (Long-Range/Area)", "role": "Nuker & Sniper", "attack": "area", "target": "Red, Floating", "target_abilities": ["Insane-Damage"], "general_abilities": ["Long-Distance"] }' +
+			',{"id": "windy", "form": "basic", "rarity": "Uber Rare", "name": "Windy", "description": "A galaxy girl who manipulates wind. Her vacuum cannon cleans enemies from a distance. Massive damage to Floating enemies (Area Attack).", "role": "Nuker", "attack": "area", "target": "Floating", "target_abilities": [ "Massive-Damage" ], "general_abilities": []}' +
+			',{"id": "windy", "form": "evolved", "rarity": "Uber Rare", "name": "Windy type α", "description": "This strange girl can hear the wind whispering. The wind tells her that it is in pain... Massive damage to Floating enemies (Area Attack).", "role": "Nuker", "attack": "area", "target": "Floating", "target_abilities": [ "Massive-Damage" ], "general_abilities": []}' +
+			',{"id": "windy", "form": "true", "rarity": "Uber Rare", "name": "Divine Windy", "description": "Has a bad habit of impulse buying the latest mechas. Neo-Vacuum Cannon blasts from long-distance. Massive damage to Floating enemies (Area Attack).", "role": "Nuker", "attack": "area", "target": "Floating", "target_abilities": [ "Massive-Damage" ], "general_abilities": []}' +
+			',{"id": "thundia", "form": "basic", "rarity": "Uber Rare", "name": "Thundia", "description": "A galaxy girl who can manipulate electricity. Brings down bolts from a distance. Massive damage to Red enemies (Area Attack).", "role": "Nuker & Backliner", "attack": "area", "target": "Red", "target_abilities": [ "Massive-Damage" ], "general_abilities": []}' +
+			',{"id": "thundia", "form": "evolved", "rarity": "Uber Rare", "name": "Thundia type β", "description": "Always worries about her chronic neck pain. Likes watching cartoons in her spare time. Massive damage to Red enemies (Area Attack).", "role": "Nuker & Backliner", "attack": "area", "target": "Red", "target_abilities": [ "Massive-Damage" ], "general_abilities": []}' +
+			',{"id": "thundia", "form": "true", "rarity": "Uber Rare", "name": "Divine Thundia", "description": "When you have a goddess\' body, it\'s tough to find clothes that fit. Long distance Area Attacks deliver massive damage to Red enemies.", "role": "Nuker & Backliner", "attack": "area", "target": "Red", "target_abilities": [ "Massive-Damage" ], "general_abilities": []}' +
+			',{"id": "kuu", "form": "basic", "rarity": "Uber Rare", "name": "Kuu", "description": "Zealous user of strange witchcraft to control her staff for great damage from a distance. Strong against Black/Red enemies. (Area Attack)", "role": "?", "attack": "area", "target": "Red, Black", "target_abilities": [ "Strong"], "general_abilities": []}' +
+			',{"id": "kuu", "form": "evolved", "rarity": "Uber Rare", "name": "Kuu, type γ", "description": "Zealous user of strange witchcraft. Not good with men, ends with verbal abuse. Strong against Black/Red enemies. (Area Attack)", "role": "?", "attack": "area", "target": "Red, Black", "target_abilities": [ "Strong"], "general_abilities": []}' +
+			',{"id": "kuu", "form": "true", "rarity": "Uber Rare", "name": "Divine Kuu", "description": "Treat her like a weakling and you\'ll know true pain. Your apologies will only make the staff smash down harder. Strong against Red/Black (Area Attack).", "role": "?", "attack": "area", "target": "Red, Black", "target_abilities": [ "Strong"], "general_abilities": [ "Weaken-Immune"]}' +
+			',{"id": "kai", "form": "basic", "rarity": "Uber Rare", "name": "Kai", "description": "Airheaded girl riding her machine pig \\"Tonton\\". Fires powerful point blank beams (Area Attack). Reduced damage from Floating, survives once.", "role": "Tanker & Melee", "attack": "area", "target": "Floating", "target_abilities": [ "Resistant"], "general_abilities": [ "Survive"]}' +
+			',{"id": "kai", "form": "evolved", "rarity": "Uber Rare", "name": "Kai type μ", "description": "Ends up liking anyone who is nice to her. Her love hurdle is mere 3cm (Area Attack). Reduced damage from Floating, survives once.", "role": "Tanker & Melee", "attack": "area", "target": "Floating", "target_abilities": [ "Resistant"], "general_abilities": [ "Survive"]}' +
+			',{"id": "kai", "form": "true", "rarity": "Uber Rare", "name": "Divine Kai", "description": "If any cute guy is your type, is that really a type? Always travels via her trusty Boarborg (Area Atk) Reduced damage from Flying, Survives Once.", "role": "Tanker & Melee", "attack": "area", "target": "Floating", "target_abilities": [ "Resistant"], "general_abilities": [ "Survive",  "Knockback-Immune"]}' +
 			']}';
 
 		const obj = JSON.parse(data);
+
+		function closePopup() {
+			document.getElementById("popup").style.display = "none";
+		}
 
 		function findByIdAndForm(source, id, form) {
 			for (var i = 0; i < source.length; i++) {
@@ -672,7 +785,10 @@
 		}
 
 		function changeSideContent(button) {
+
+			window.location.href = "#anchor";
 			var txt = button.id;
+
 			document.getElementById("basic").src = "cat-icons/" + txt.toString() + "-basic.png";
 			document.getElementById("evolved").src = "cat-icons/" + txt.toString() + "-evolved.png";
 			document.getElementById("true").src = "cat-icons/" + txt.toString() + "-true.png";
@@ -688,6 +804,22 @@
 			document.getElementById("unit").innerText = items.name;
 			document.getElementById("desc").innerText = items.description;
 			document.getElementById("role").innerText = "Role: " + items.role;
+
+			for (let i = 0; i < obj.units.length; i++) {
+				if (document.getElementById(obj.units[i].id.toString()) != null) {
+					if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselect")) {
+						document.getElementById(obj.units[i].id.toString()).classList.remove("searchselect");
+					}
+					if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselectrainbow")) {
+						document.getElementById(obj.units[i].id.toString()).classList.remove("searchselectrainbow");
+					}
+				}
+			}
+			if (items.rarity.toString() === "Legend Rare") {
+				document.getElementById(txt.toString()).classList.add("searchselectrainbow");
+			} else {
+				document.getElementById(txt.toString()).classList.add("searchselect");
+			}
 
 			if (items.general_abilities.some(item => item === 'Multi')) {
 				document.getElementById("targetattack").src = "ability-icons/" + items.attack.toString() + "Multi.png";
@@ -786,7 +918,9 @@
 			document.getElementById("TAtooltip").innerText = target_abilities_list;
 			return false;
 		}
+
 		function changeIGImage(image) {
+			//window.location.href = "#anchor";
 			var id = image.id;
 
 			if (document.getElementById("basic").classList.contains('selected')) {
@@ -908,6 +1042,23 @@
 			let unit = findBySearchTerm(obj.units, searchValue);
 			//console.log(unit);
 			window.location.href = "#" + unit.id.toString();
+			window.location.href = "#anchor";
+
+			for (let i = 0; i < obj.units.length; i++) {
+				if (document.getElementById(obj.units[i].id.toString()) != null) {
+					if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselect")) {
+						document.getElementById(obj.units[i].id.toString()).classList.remove("searchselect");
+					}
+					if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselectrainbow")) {
+						document.getElementById(obj.units[i].id.toString()).classList.remove("searchselectrainbow");
+					}
+				}
+			}
+			if (unit.rarity.toString() === "Legend Rare") {
+				document.getElementById(unit.id.toString()).classList.add("searchselectrainbow");
+			} else {
+				document.getElementById(unit.id.toString()).classList.add("searchselect");
+			}
 
 			document.getElementById("basic").src = "cat-icons/" + unit.id.toString() + "-basic.png";
 			document.getElementById("evolved").src = "cat-icons/" + unit.id.toString() + "-evolved.png";
@@ -1022,17 +1173,27 @@
 
 
 		}
+
+		function position(element) {
+			const rect = element.getBoundingClientRect();
+			return {
+				left: rect.left + window.scrollX,
+				top: rect.top + window.scrollY
+			}
+		}
 	</script>
 
 </head>
 
 <body>
+	<!--<canvas id="canvas"></canvas>-->
 	<div class="sidebar">
 		<div class="sidecontent">
-			<div class="column">
-				<div id="catinfo" style="border: 2px solid black; background-color: white; margin: -4px;">
+			<div class="column" id="anchor">
+				<div id="catinfo"
+					style="border: 2px solid white; background-color: rgba(0,0,0,0.6); color: white; margin: -4px;">
 					<h3 id="unit" onerror="this.innerText='Unknown Unit Name'"
-						style="font-size: 32px; margin-top: 4px; margin-bottom: 20px;">Unit Name</h3>
+						style="font-size: 24px; margin-top: 4px; margin-bottom: 20px;">Unit Name</h3>
 					<p id="form" style="margin-top:-24px">Unit Form</p>
 				</div>
 				<br>
@@ -1057,23 +1218,23 @@
 			</div>
 			<div class="column">
 				<p id="role" onerror="this.innerText='Role: Unknown'"
-					style="padding: 8px; outline: solid 2px; background-color: rgb(255, 155, 180);">
+					style="padding: 8px; outline: solid 2px white; background-color: rgba(106, 0, 27, 0.6); color: white;">
 					Role: Unknown</p>
 				<p id="desc" onerror="this.innerText='Unknown Description.'"
-					style="padding: 8px; outline: solid 2px; background-color: white;">
+					style="padding: 8px; outline: solid 2px white; background-color: rgba(0,0,0,0.6); color: white;">
 					Unknown Description.</p>
 				<table
-					style="table-layout: fixed ; width: 100%;background-color: white; border-collapse: collapse; width: 100%">
+					style="table-layout: fixed ; width: 100%;background-color: rgba(0,0,0,0.6); color: white; border-collapse: collapse; width: 100%">
 					<tr>
-						<th style="border: 1px solid #000; padding: 8px;">Attack Target</th>
-						<th style="border: 1px solid #000; padding: 8px;">General Abilities</th>
+						<th style="border: 2px solid white; padding: 8px;">Attack Target</th>
+						<th style="border: 2px solid white; padding: 8px;">General Abilities</th>
 					</tr>
 					<tr>
-						<td style="border: 1px solid #000; padding: 8px;">
+						<td style="border: 2px solid white; padding: 8px;">
 							<img id="targetattack" onerror="this.src='ability-icons/single.png'"
 								src="ability-icons/single.png" alt="Attack Target Icon" />
 						</td>
-						<td style="border: 1px solid #000; padding: 8px;" id="generalabilities">
+						<td style="border: 2px solid white; padding: 8px;" id="generalabilities">
 							<img id="Omnistrike" src="ability-icons/Omnistrike.png" alt="Omnistrike Icon" />
 							<img id="Long-Distance" src="ability-icons/Long Distance.png" alt="Long Distance Icon" />
 							<img id="Strengthen" src="ability-icons/Strengthen.png" alt="Strengthen Icon" />
@@ -1113,24 +1274,24 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="border: 1px solid #000; padding: 8px;">
+						<td style="border: 2px solid white; padding: 8px;">
 							<p id="ATtooltip"></p>
 						</td>
-						<td style="border: 1px solid #000; padding: 8px;">
+						<td style="border: 2px solid white; padding: 8px;">
 							<p id="GAtooltip"></p>
 						</td>
 					</tr>
 				</table>
 				<br>
 				<table
-					style="table-layout: fixed ; width: 100%;background-color: white; border-collapse: collapse; width: 100%">
+					style="table-layout: fixed ; width: 100%;background-color: rgba(0,0,0,0.6); color: white; border-collapse: collapse; width: 100%">
 					<tr>
-						<th style="border: 1px solid #000; padding: 8px;">Target Traits</th>
-						<th style="border: 1px solid #000; padding: 8px;">Target Abilities</th>
+						<th style="border: 2px solid white; padding: 8px;">Target Traits</th>
+						<th style="border: 2px solid white; padding: 8px;">Target Abilities</th>
 					</tr>
 					<tr>
-						<td style="border: 1px solid #000; padding: 8px;" id="targettraits">None</td>
-						<td style="border: 1px solid #000; padding: 8px;" id="targetabilities">
+						<td style="border: 2px solid white; padding: 8px;" id="targettraits">None</td>
+						<td style="border: 2px solid white; padding: 8px;" id="targetabilities">
 							<img id="Weaken" src="ability-icons/Weaken.png" alt="Weaken Icon" />
 							<img id="Freeze" src="ability-icons/Freeze.png" alt="Freeze Icon" />
 							<img id="Slow" src="ability-icons/Slow.png" alt="Slow Icon" />
@@ -1146,10 +1307,10 @@
 						</td>
 					</tr>
 					<tr>
-						<td style="border: 1px solid #000; padding: 8px;">
+						<td style="border: 2px solid white; padding: 8px;">
 							<p id="TTtooltip"></p>
 						</td>
-						<td style="border: 1px solid #000; padding: 8px;">
+						<td style="border: 2px solid white; padding: 8px;">
 							<p id="TAtooltip"></p>
 						</td>
 					</tr>
@@ -1157,14 +1318,19 @@
 			</div>
 		</div>
 	</div>
-	<div style="position:fixed; background-color: rgba(255, 255, 255, 0.8); padding-left: 8px; padding-right: 8px; margin-top: 28px;">
-		<p>Note: Website is under construction.</p>
-		<p>Questions? Contact shibest#5387 on Discord.</p>
-		<p>Bg Image by Cosmic Froggo in Friday Night<br>Funkin: Battle Cats Mod</p>
+	<div id="popup"
+		style="position:fixed; background-color: rgba(255, 255, 255, 0.8); padding-left: 8px; padding-right: 8px; margin-top: 28px;">
+		<p>Note: Website is under construction.<br>
+			Questions? Contact shibest#5387 on Discord.<br>
+			Bg Image by Cosmic Froggo<br>
+			Assets and images from PONOS<br>
+			<input type="button" style="text-decoration: underline; color: blue;" value="[x] Close"
+				onclick="closePopup();">
+		</p>
 	</div>
 	<div class="wrapper">
 		<div class="top-bar">
-			<img style="padding-top: 24px; width: 20%;" src="TBCATSLogo.png"/>
+			<img style="padding-top: 24px; width: 20%;" src="TBCATSLogo.png" />
 			<h1 style="margin-top: -4px;">The Ultimate Guide</h1>
 			<ul>
 				<li><a href="#home" onclick="alert('Sorry, this is not available right now.')">Home</a></li>
@@ -1179,7 +1345,7 @@
 					</div>
 				</li>
 				<li class="dropdown">
-					<a href="javascript:void(0)" class="dropbtn">Talent Priorities</a>
+					<a href="javascript:void(0)" class="dropbtn">Priorities</a>
 					<div class="dropdown-content">
 						<a href="#" onclick="alert('Sorry, this is not available right now.')">Special Cats</a>
 						<a href="#" onclick="alert('Sorry, this is not available right now.')">Rare Cats</a>
@@ -1188,7 +1354,7 @@
 					</div>
 				</li>
 				<li class="dropdown">
-					<a href="javascript:void(0)" class="dropbtn">Stage Guides</a>
+					<a href="javascript:void(0)" class="dropbtn">Guides</a>
 					<div class="dropdown-content">
 						<a href="#" onclick="alert('Sorry, this is not available right now.')">Advent Stages</a>
 						<a href="#" onclick="alert('Sorry, this is not available right now.')">Boss Stages</a>
@@ -1264,6 +1430,7 @@
 				<p>All units are named by their basic form<br>
 					Each unit's rarity will be listed under the name<br>
 					Ubers above line = worth, ubers below line = bad<br>
+					Aqua ubers were ranked w/o true form, ranking may change<br>
 					All unit information is on the right panel<br>
 					And please note: the search function is primitive
 				</p>
@@ -1271,7 +1438,7 @@
 
 			<div class="sets dynamites" id="thedynamites">
 				<img src="dynamites.png" alt="Dynamites Banner Image" />
-				<p>Last Updated: 1/23/22</p>
+				<p>Last Updated: 9/2/22</p>
 				<p><input type="button" class="uber" id="lesserdemon" value="1. Lesser Demon Cat"
 						onclick="changeSideContent(this);"><br>Uber Rare Cat</p>
 				<p><input type="button" class="uber" id="baby" value="2. Baby Cat"
@@ -1286,185 +1453,182 @@
 						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 				<p><input type="button" class="uber" id="marauder" value="7. Marauder Cat"
 						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="new uber" id="tengu" value="8. Cat Tengu"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 				<hr>
-				<p><input type="button" class="uber" id="nurse" value="8. Nurse Cat"
+				<p><input type="button" class="uber" id="nurse" value="9. Nurse Cat"
 						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
-				<p><input type="button" class="uber" id="machine" value="9. Cat Machine"
+				<p><input type="button" class="uber" id="machine" value="10. Cat Machine"
 						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
-				<p><input type="button" class="uber" id="clanheroes" value="10. Cat Clan Heroes"
-						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
-				<p><input type="button" class="uber" id="tengu" value="*Unranked: Cat Tengu"
+				<p><input type="button" class="uber" id="clanheroes" value="11. Cat Clan Heroes"
 						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 			</div>
 
 			<div class="sets lugas" id="talesofthenekoluga">
 				<img src="lugas.png" alt="Lugas Banner Image" />
 				<p>Last Updated: 4/21/22</p>
-				<p><input type="button" class="uber" id="teco" value="1. Tecoluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker & Super-Backliner}</p>
-				<p><input type="button" class="uber" id="toge" value="2. Togeluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Backliner & Nuker}</p>
-				<p><input type="button" class="uber" id="bala" value="3. Balaluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller & Super-Backliner}</p>
-				<p><input type="button" class="uber" id="asi" value="4. Asiluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller & Super-Backliner}</p>
+				<p><input type="button" class="uber" id="teco" value="1. Tecoluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="toge" value="2. Togeluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="bala" value="3. Balaluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="asi" value="4. Asiluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 				<hr>
-				<p><input type="button" class="rainbow" id="lege" value="5. Legeluga - Legend Rare Cat"
-						onclick="changeSideContent(this)"><br>{Rusher}</p>
-				<p><input type="button" class="uber" id="kubi" value="6. Kubiluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller(Evolved) | Backliner &
-					Critter(True)}</p>
-				<p><input type="button" class="uber" id="neko" value="7. Nekoluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Super-Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="nobi" value="8. Nobiluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Sniper}</p>
-				<p><input type="button" class="new uber" id="furi" value="9. Furiluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Breaker & Super-Backliner}</p>
-				<p><input type="button" class="uber" id="papa" value="10. Papaluga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
+				<p><input type="button" class="rainbow" id="lege" value="5. Legeluga"
+						onclick="changeSideContent(this)"><br>Legend Rare Cat</p>
+				<p><input type="button" class="uber" id="kubi" value="6. Kubiluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="neko" value="7. Nekoluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="nobi" value="8. Nobiluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="new uber" id="furi" value="9. Furiluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="papa" value="10. Papaluga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 			</div>
 
 			<div class="sets wargods" id="sengokuwargodsvajiras">
 				<img src="wargods.png" alt="Wargods Banner Image" />
-				<p>Last Updated: 1/29/22</p>
-				<p><input type="button" class="uber" id="yuki" value="1. Sanada Yukimura - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Rusher & Nuker}</p>
-				<p><input type="button" class="uber" id="keiji" value="2. Maeda Keiji - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Midranger & Tanker}</p>
-				<p><input type="button" class="uber" id="shingen" value="3. Takeda Shingen - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="kenshin" value="4. Uesugi Kenshin - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="rainbow" id="musashi" value="5. Musashi Miyamoto - Legend Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="yoshi" value="6. Imagawa Yoshimoto - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Sniper & Crowd-Controller}</p>
+				<p>Last Updated: 6/3/22</p>
+				<p><input type="button" class="uber" id="yuki" value="1. Sanada Yukimura"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="keiji" value="2. Maeda Keiji"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="shingen" value="3. Takeda Shingen"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="kenshin" value="4. Uesugi Kenshin"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="rainbow" id="musashi" value="5. Musashi Miyamoto"
+						onclick="changeSideContent(this)"><br>Legend Rare Cat</p>
+				<p><input type="button" class="uber" id="yoshi" value="6. Imagawa Yoshimoto"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="new uber" id="hanzo" value="7. Hattori Hanzo"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 				<hr>
-				<p><input type="button" class="uber" id="kaihime" value="7. Narita Kaihime - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="new uber" id="shiro" value="8. Shiro Amakusa - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{?}</p>
-				<p><input type="button" class="uber" id="masamune" value="9. Date Masamune - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller & Midranger(Normal/Evolved) |
-					Crowd-Controller & Backliner(True)}</p>
-				<p><input type="button" class="uber" id="oda" value="10. Oda Nobunaga - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="hanzo" value="*Unranked: Hattori Hanzo - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{?}</p>
+				<p><input type="button" class="uber" id="kaihime" value="8. Narita Kaihime"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="new uber" id="shiro" value="9. Shiro Amakusa"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="masamune" value="10. Date Masamune"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="oda" value="11. Oda Nobunaga"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 			</div>
 
 			<div class="sets ggals" id="cyberacademygalaxygals">
 				<img src="ggals.png" alt="Galaxy Gals Banner Image" />
-				<p>Last Updated: 2/5/22</p>
-				<p><input type="button" class="uber" id="kai" value="1. Kai - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Tanker & Melee}</p>
-				<p><input type="button" class="uber" id="kalisa" value="2. Kalisa - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Rusher & Nuker}</p>
-				<p><input type="button" class="rainbow" id="jeanne" value="3. Headmistress Jeanne - Legend Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker & Sniper}</p>
-				<p><input type="button" class="uber" id="thundia" value="4. Thundia - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker & Backliner}</p>
-				<p><input type="button" class="uber" id="windy" value="5. Windy - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="twinstars" value="6. Twinstars - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Rusher & Nuker}</p>
+				<p>Last Updated: 6/6/22</p>
+				<p><input type="button" class="uber" id="kai" value="1. Kai" onclick="changeSideContent(this)"><br>Uber
+					Rare Cat</p>
+				<p><input type="button" class="uber" id="kalisa" value="2. Kalisa"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="lilin" value="3. Lilin"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="rainbow" id="jeanne" value="4. Headmistress Jeanne"
+						onclick="changeSideContent(this)"><br>Legend Rare Cat</p>
+				<p><input type="button" class="uber" id="thundia" value="5. Thundia"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="windy" value="6. Windy"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="twinstars" value="7. Twinstars"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="new uber" id="terun" value="8. Huntress Terun"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 				<hr>
-				<p><input type="button" class="uber" id="kuu" value="7. Kuu" onclick="changeSideContent(this)"><br>{?}
-				</p>
-				<p><input type="button" class="new uber" id="lilin" value="8. Lilin - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Midranger & Breaker}</p>
-				<p><input type="button" class="uber" id="copper" value="9. Coppermine - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller & Midranger(Normal/Evolved) |
-					Crowd-Controller & Backliner(True)}</p>
-				<p><input type="button" class="uber" id="myrcia" value="10. Myrcia - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{?}</p>
-				<p><input type="button" class="uber" id="terun" value="*Unranked: Huntress Terun - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller & Backliner}</p>
+				<p><input type="button" class="uber" id="kuu" value="9. Kuu" onclick="changeSideContent(this)"><br>Uber
+					Rare Cat</p>
+				<p><input type="button" class="uber" id="copper" value="10. Coppermine"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
+				<p><input type="button" class="uber" id="myrcia" value="11. Myrcia"
+						onclick="changeSideContent(this)"><br>Uber Rare Cat</p>
 			</div>
 
 			<div class="sets dragon" id="lordsofdestructiondragonemperors">
 				<img src="dragon.png" alt="Dragon Emperors Banner Image" />
-				<p>Last Updated: 2/17/22</p>
-				<p><input type="button" class="uber" id="ganglion" value="1. Ganglion - Uber Rare Cat"
+				<p>Last Updated: 8/2/22</p>
+				<p><input type="button" class="uber" id="ganglion" value="1. Ganglion"
 						onclick="changeSideContent(this)"><br>{Rusher & Midranger}</p>
-				<p><input type="button" class="uber" id="vars" value="2. Vars - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="dali" value="2. Sea Serpent Daliasan"
+						onclick="changeSideContent(this)"><br>{Super-Backliner}</p>
+				<p><input type="button" class="uber" id="vars" value="3. Vars"
 						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="raiden" value="3. Raiden - Uber Rare Cat"
+				<p><input type="button" class="uber" id="raiden" value="4. Raiden"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller & Midranger(Normal/Evolved) |
 					Crowd-Controller & Backliner(True)}</p>
-				<p><input type="button" class="new uber" id="hevijak" value="4. Hevijak the Wicked - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="hevijak" value="5. Hevijak the Wicked"
 						onclick="changeSideContent(this)"><br>{Backliner}</p>
 				<hr>
-				<p><input type="button" class="uber" id="kama" value="5. Kamakura - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kama" value="6. Kamakura"
 						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="megi" value="6. Megidora - Uber Rare Cat"
+				<p><input type="button" class="uber" id="megi" value="7. Megidora"
 						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="gladios" value="7. Relentless Gladios - Uber Rare Cat"
+				<p><input type="button" class="uber" id="gladios" value="8. Relentless Gladios"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="rainbow" id="babel" value="8. High Lord Babel - Legend Rare Cat"
+				<p><input type="button" class="rainbow" id="babel" value="9. High Lord Babel"
 						onclick="changeSideContent(this)"><br>{Tanker}</p>
-				<p><input type="button" class="uber" id="dior" value="9. Dioramos - Uber Rare Cat"
+				<p><input type="button" class="uber" id="dior" value="10. Dioramos"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller & Tanker}</p>
-				<p><input type="button" class="uber" id="sodom" value="10. Sodom - Uber Rare Cat"
+				<p><input type="button" class="uber" id="sodom" value="11. Sodom"
 						onclick="changeSideContent(this)"><br>{Tanker & Backliner}</p>
-				<p><input type="button" class="uber" id="dali" value="*Unranked: Sea Serpent Daliasan - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Super-Backliner}</p>
 			</div>
 
 			<div class="sets heroes" id="ancientheroesultrasouls">
 				<img src="heroes.png" alt="Ultra Souls Banner Image" />
 				<p>Last Updated: 2/25/22</p>
-				<p><input type="button" class="uber" id="jizo" value="1. Kasa Jizo - Uber Rare Cat"
+				<p><input type="button" class="uber" id="jizo" value="1. Kasa Jizo"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Nuker(Evolved/True)}</p>
-				<p><input type="button" class="rainbow" id="ushi" value="2. Ushiwakamaru - Legend Rare Cat"
+				<p><input type="button" class="rainbow" id="ushi" value="2. Ushiwakamaru"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Nuker & Tanker(True)}</p>
-				<p><input type="button" class="uber" id="kintaro" value="3. Kintaro - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kintaro" value="3. Kintaro"
 						onclick="changeSideContent(this)"><br>{Sniper & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="momo" value="4. Momotaro - Uber Rare Cat"
+				<p><input type="button" class="uber" id="momo" value="4. Momotaro"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller(Normal) | Rusher &
 					Crowd-Controller(Evolved/True)}</p>
-				<p><input type="button" class="uber" id="saru" value="5. Sarukani - Uber Rare Cat"
+				<p><input type="button" class="uber" id="saru" value="5. Sarukani"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Nuker & Backliner(Evolved/True)}</p>
-				<p><input type="button" class="uber" id="taro" value="6. Urashima Taro - Uber Rare Cat"
+				<p><input type="button" class="uber" id="taro" value="6. Urashima Taro"
 						onclick="changeSideContent(this)"><br>{Tanker}</p>
-				<p><input type="button" class="uber" id="crane" value="7. The Grateful Crane - Uber Rare Cat"
+				<p><input type="button" class="uber" id="crane" value="7. The Grateful Crane"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller(Normal) | Super-Backliner &
 					Crowd-Controller(Evolved/True)}</p>
 				<hr>
-				<p><input type="button" class="uber" id="kaguya" value="8. Princess Kaguya - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kaguya" value="8. Princess Kaguya"
 						onclick="changeSideContent(this)"><br>{?}</p>
-				<p><input type="button" class="uber" id="kachi" value="9. Kachi-Kachi - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kachi" value="9. Kachi-Kachi"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="new uber" id="sparrow" value="10. Shitakiri Sparrow - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="sparrow" value="10. Shitakiri Sparrow"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
 			</div>
 
 			<div class="sets justice" id="justicestrikesbackdarkheroes">
 				<img src="justice.png" alt="Dark Heroes Banner Image" />
 				<p>Last Updated: 3/5/22</p>
-				<p><input type="button" class="uber" id="catman" value="1. Catman - Uber Rare Cat"
+				<p><input type="button" class="uber" id="catman" value="1. Catman"
 						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="saki" value="2. Sharpshooter Saki - Uber Rare Cat"
+				<p><input type="button" class="uber" id="saki" value="2. Sharpshooter Saki"
 						onclick="changeSideContent(this)"><br>{Sniper}</p>
-				<p><input type="button" class="uber" id="wnp" value="3. Warlock and Pierre - Uber Rare Cat"
+				<p><input type="button" class="uber" id="wnp" value="3. Warlock and Pierre"
 						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="rainbow" id="doktor" value="4. Doktor Heaven - Legend Rare Cat"
+				<p><input type="button" class="rainbow" id="doktor" value="4. Doktor Heaven"
 						onclick="changeSideContent(this)"><br>{Tanker(Normal) | Nuker(Evolved)}</p>
-				<p><input type="button" class="uber" id="mekako" value="5. Mekako Saionji - Uber Rare Cat"
+				<p><input type="button" class="uber" id="mekako" value="5. Mekako Saionji"
 						onclick="changeSideContent(this)"><br>{Tanker(Normal) | Crowd-Controller(Evolved) | Nuker &
 					Crowd-Controller(True)}</p>
-				<p><input type="button" class="uber" id="haya" value="6. Hayabusa - Uber Rare Cat"
+				<p><input type="button" class="uber" id="haya" value="6. Hayabusa"
 						onclick="changeSideContent(this)"><br>{Critter & Rusher(Normal) | Crowd-Controller &
 					Rusher(Evolved/True)}</p>
-				<p><input type="button" class="uber" id="vigler" value="7. Detective Vigler - Uber Rare Cat"
+				<p><input type="button" class="uber" id="vigler" value="7. Detective Vigler"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
 				<hr>
-				<p><input type="button" class="uber" id="akira" value="8. Akira - Uber Rare Cat"
+				<p><input type="button" class="uber" id="akira" value="8. Akira"
 						onclick="changeSideContent(this)"><br>{?}</p>
-				<p><input type="button" class="new uber" id="cyclops" value="9. White Knight Cyclops - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="cyclops" value="9. White Knight Cyclops"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller & Backliner(Normal) |
 					Backliner(Evolved)}</p>
-				<p><input type="button" class="uber" id="rabbit" value="10. The White Rabbit - Uber Rare Cat"
+				<p><input type="button" class="uber" id="rabbit" value="10. The White Rabbit"
 						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller(Normal/True) |
 					Backliner(Evolved)}</p>
 			</div>
@@ -1472,129 +1636,133 @@
 			<div class="sets almighties" id="thealmightiesthemajesticzeus">
 				<img src="almighties.png" alt="The Almighties Banner Image" />
 				<p>Last Updated: 3/11/22</p>
-				<p><input type="button" class="uber" id="aphrodite" value="1. Radiant Aphrodite - Uber Rare Cat"
+				<p><input type="button" class="uber" id="aphrodite" value="1. Radiant Aphrodite"
 						onclick="changeSideContent(this)"><br>{Sniper & Nuker}</p>
-				<p><input type="button" class="uber" id="amaterasu" value="2. Shining Amaterasu - Uber Rare Cat"
+				<p><input type="button" class="uber" id="amaterasu" value="2. Shining Amaterasu"
 						onclick="changeSideContent(this)"><br>{Backliner & Nuker}</p>
-				<p><input type="button" class="rainbow" id="gaia" value="3. Gaia the Creator - Legend Rare Cat"
+				<p><input type="button" class="rainbow" id="gaia" value="3. Gaia the Creator"
 						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="chronos" value="4. Empress Chronos - Uber Rare Cat"
+				<p><input type="button" class="uber" id="chronos" value="4. Empress Chronos"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="ganesha" value="5. Splendid Ganesha - Uber Rare Cat"
+				<p><input type="button" class="uber" id="ganesha" value="5. Splendid Ganesha"
 						onclick="changeSideContent(this)"><br>{Sniper}</p>
-				<p><input type="button" class="new uber" id="lucifer" value="6. Lucifer the Fallen - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="lucifer" value="6. Lucifer the Fallen"
 						onclick="changeSideContent(this)"><br>{Super-Backliner}</p>
-				<p><input type="button" class="uber" id="poseidon" value="7. Wrathful Poseidon - Uber Rare Cat"
+				<p><input type="button" class="uber" id="poseidon" value="7. Wrathful Poseidon"
 						onclick="changeSideContent(this)"><br>{Rusher & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="hades" value="8. Hades the Punisher - Uber Rare Cat"
+				<p><input type="button" class="uber" id="hades" value="8. Hades the Punisher"
 						onclick="changeSideContent(this)"><br>{Tanker}</p>
 				<hr>
-				<p><input type="button" class="uber" id="anubis" value="9. Anubis the Protector - Uber Rare Cat"
+				<p><input type="button" class="uber" id="anubis" value="9. Anubis the Protector"
 						onclick="changeSideContent(this)"><br>{Backliner}</p>
-				<p><input type="button" class="uber" id="zeus" value="10. Thunder God Zeus - Uber Rare Cat"
+				<p><input type="button" class="uber" id="zeus" value="10. Thunder God Zeus"
 						onclick="changeSideContent(this)"><br>{Backliner}</p>
 			</div>
 
 			<div class="sets legion" id="frontlineassaultironlegion">
 				<img src="legion.png" alt="Iron Legion Banner Image" />
-				<p>Last Updated: 3/23/22</p>
-				<p><input type="button" class="uber" id="thermae" value="1. Mighty Thermae D-Lux - Uber Rare Cat"
+				<p>Last Updated: 10/23/22</p>
+				<p><input type="button" class="uber" id="thermae" value="1. Mighty Thermae D-Lux"
 						onclick="changeSideContent(this)"><br>{Sniper & Crowd-Controller}</p>
-				<p><input type="button" class="rainbow" id="muu" value="2. Mighty Krystal Muu - Legend Rare Cat"
+				<p><input type="button" class="rainbow" id="muu" value="2. Mighty Krystal Muu"
 						onclick="changeSideContent(this)"><br>{Nuker & Tanker}</p>
-				<p><input type="button" class="uber" id="drednot" value="3. Mighty Drednot - Uber Rare Cat"
+				<p><input type="button" class="uber" id="drednot" value="3. Mighty Drednot"
 						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="korps" value="4. Mighty Rekon Korps - Uber Rare Cat"
+				<p><input type="button" class="uber" id="deth" value="4. Mighty Deth-Troy-R"
+						onclick="changeSideContent(this)"><br>{Nuker & Backliner}</p>
+				<p><input type="button" class="uber" id="korps" value="5. Mighty Rekon Korps"
 						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="bomburr" value="5. Mighty Bomburr - Uber Rare Cat"
+				<p><input type="button" class="uber" id="bomburr" value="6. Mighty Bomburr"
 						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="aethur" value="6. Mighty Aethur Ltd. - Uber Rare Cat"
+				<p><input type="button" class="uber" id="aethur" value="7. Mighty Aethur Ltd."
 						onclick="changeSideContent(this)"><br>{Nuker & Sniper}</p>
 				<hr>
-				<p><input type="button" class="new uber" id="deth" value="7. Mighty Deth-Troy-R - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Nuker & Backliner}</p>
-				<p><input type="button" class="uber" id="kap" value="8. Mighty Kat-A-Pult - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kap" value="8. Mighty Kat-A-Pult"
 						onclick="changeSideContent(this)"><br>{Sniper & Tanker}</p>
-				<p><input type="button" class="uber" id="carrow" value="*Unranked: Mighty Carrowsell - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="carrow" value="9. Mighty Carrowsell"
 						onclick="changeSideContent(this)"><br>{?}</p>
 			</div>
 
 			<div class="sets pixies" id="naturesguardianselementalpixies">
 				<img src="pixies.png" alt="Elemental Pixies Banner Image" />
-				<p>Last Updated: 3/29/22</p>
-				<p><input type="button" class="rainbow" id="lumi" value="1. Lumina - Legend Rare Cat"
+				<p>Last Updated: 5/31/22</p>
+				<p><input type="button" class="rainbow" id="lumi" value="1. Lumina"
 						onclick="changeSideContent(this)"><br>{Tanker & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="bora" value="2. Bora - Uber Rare Cat"
+				<p><input type="button" class="uber" id="bora" value="2. Bora"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Nuker(Evolved/True)}</p>
-				<p><input type="button" class="uber" id="gravi" value="3. Gravi - Uber Rare Cat"
+				<p><input type="button" class="uber" id="gravi" value="3. Gravi"
 						onclick="changeSideContent(this)"><br>{Tanker & Waver}</p>
-				<p><input type="button" class="uber" id="voli" value="4. Voli - Uber Rare Cat"
+				<p><input type="button" class="uber" id="voli" value="4. Voli"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="mizli" value="5. Mizli - Uber Rare Cat"
+				<p><input type="button" class="uber" id="mizli" value="5. Mizli"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="aer" value="6. Aer - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Sniper}</p>
 				<hr>
-				<p><input type="button" class="new uber" id="yamii" value="7. Yamii - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="bliza" value="*Unranked: Bliza - Uber Rare Cat"
+				<p><input type="button" class="new uber" id="bliza" value="6. Bliza"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller & Sniper}</p>
+				<p><input type="button" class="uber" id="aer" value="7. Aer"
+						onclick="changeSideContent(this)"><br>{Sniper}</p>
+				<p><input type="button" class="new uber" id="yamii" value="8. Yamii"
+						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
 			</div>
 
 			<div class="sets monsters" id="girlsandmonstersangelsofterror">
 				<img src="monsters.png" alt="Girls & Monsters Banner Image" />
-				<p>Last Updated: 4/10/22</p>
-				<p><input type="button" class="rainbow" id="nanaho" value="1. Kyosaka Nanaho - Legend Rare Cat"
+				<p>Last Updated: 12/11/22</p>
+				<p><input type="button" class="rainbow" id="nanaho" value="1. Kyosaka Nanaho"
 						onclick="changeSideContent(this)"><br>{Critter & Sniper}</p>
-				<p><input type="button" class="uber" id="reika" value="2. Queen Reika - Uber Rare Cat"
+				<p><input type="button" class="uber" id="reika" value="2. Queen Reika"
 						onclick="changeSideContent(this)"><br>{Nuker & Backliner}</p>
-				<p><input type="button" class="uber" id="yuri" value="3. Trickster Himeyuri - Uber Rare Cat"
+				<p><input type="button" class="uber" id="yuri" value="3. Trickster Himeyuri"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="ruri" value="4. Sea Maiden Ruri - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Tanker}</p>
-				<p><input type="button" class="new uber" id="kanna" value="5. Adventurer Kanna - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kanna" value="4. Adventurer Kanna"
 						onclick="changeSideContent(this)"><br>{Backliner & Sniper}</p>
-				<p><input type="button" class="uber" id="deale" value="6. Wolfchild Deale - Uber Rare Cat"
+				<p><input type="button" class="uber" id="ruri" value="5. Sea Maiden Ruri"
+						onclick="changeSideContent(this)"><br>{Tanker}</p>
+				<p><input type="button" class="new uber" id="vega" value="6. Spectral Goth Vega"
+						onclick="changeSideContent(this)"><br>{Midranger & Crowd-Controller}</p>
+				<p><input type="button" class="uber" id="deale" value="7. Wolfchild Deale"
 						onclick="changeSideContent(this)"><br>{Backliner & Crowd-Controller}</p>
 				<hr>
-				<p><input type="button" class="uber" id="verbena" value="7. Graveflower Verbena - Uber Rare Cat"
+				<p><input type="button" class="uber" id="verbena" value="8. Graveflower Verbena"
 						onclick="changeSideContent(this)"><br>{Critter & Midranger}</p>
-				<p><input type="button" class="uber" id="vega" value="*Unranked: Spectral Goth Vega - Uber Rare Cat"
-						onclick="changeSideContent(this)"><br>{Midranger & Crowd-Controller}</p>
 			</div>
 
 			<div class="sets exclusives" id="superfestexclusives">
 				<img src="superfest.png" alt="Superfest Banner Image" />
-				<p>Only Superfest Exclusives (Uberfest + Epicfest Exclusives)</p>
-				<p><input type="button" class="uber" id="dasli" value="1. Kasli the Bane - Uber Rare Cat"
+				<p>Only Superfest Exclusives (Uberfest + Epicfest Exclusives)<br>Last Updated: 8/8/22</p>
+				<p><input type="button" class="uber" id="dasli" value="1. Kasli the Bane"
 						onclick="changeSideContent(this)"><br>{Sniper & Backliner}</p>
-				<p><input type="button" class="uber" id="mitama" value="2. Miko Mitama - Uber Rare Cat"
+				<p><input type="button" class="uber" id="mitama" value="2. Miko Mitama"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Crowd-Controller & Sniper(Evolved)}
 				</p>
-				<p><input type="button" class="uber" id="kasli" value="3. Kasli the Scourge - Uber Rare Cat"
+				<p><input type="button" class="uber" id="kasli" value="3. Kasli the Scourge"
 						onclick="changeSideContent(this)"><br>{Sniper & Crowd-Controller}</p>
-				<p><input type="button" class="uber" id="dark" value="4. D'arktanyan - Uber Rare Cat"
+				<p><input type="button" class="uber" id="dark" value="4. D'arktanyan"
 						onclick="changeSideContent(this)"><br>{Rusher & Sniper}</p>
-				<p><input type="button" class="uber" id="dart" value="5. D'artanyan - Uber Rare Cat"
+				<p><input type="button" class="uber" id="dart" value="5. D'artanyan"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Rusher & Sniper(Evolved)}</p>
-				<p><input type="button" class="uber" id="gao" value="6. Baby Gao - Uber Rare Cat"
+				<p><input type="button" class="uber" id="gao" value="6. Baby Gao"
 						onclick="changeSideContent(this)"><br>{Midranger(Normal) | Backliner(Evolved)}</p>
-				<p><input type="button" class="uber" id="sgao" value="7. Shadow Gao - Uber Rare Cat"
+				<p><input type="button" class="uber" id="sgao" value="7. Shadow Gao"
 						onclick="changeSideContent(this)"><br>{Nuker}</p>
-				<p><input type="button" class="uber" id="diz" value="8. Iz the Dancer of Grief - Uber Rare Cat"
+				<p><input type="button" class="uber" id="diz" value="8. Iz the Dancer of Grief"
 						onclick="changeSideContent(this)"><br>{Midranger}</p>
-				<p><input type="button" class="uber" id="iz" value="9. Iz the Dancer - Uber Rare Cat"
+				<p><input type="button" class="uber" id="iz" value="9. Iz the Dancer"
 						onclick="changeSideContent(this)"><br>{Midranger}</p>
-				<p><input type="button" class="uber" id="dmitama" value="10. Dark Mitama - Uber Rare Cat"
+				<p><input type="button" class="uber" id="dmitama" value="10. Dark Mitama"
 						onclick="changeSideContent(this)"><br>{Crowd-Controller & Sniper}</p>
-				<p><input type="button" class="uber" id="dgaru" value="11. Dark Aegis Garu - Uber Rare Cat"
+				<p><input type="button" class="uber" id="dgaru" value="11. Dark Aegis Garu"
 						onclick="changeSideContent(this)"><br>{Tanker & Midranger}</p>
-				<p><input type="button" class="uber" id="garu" value="12. Baby Garu - Uber Rare Cat"
+				<p><input type="button" class="uber" id="garu" value="12. Baby Garu"
 						onclick="changeSideContent(this)"><br>{Melee(Normal) | Tanker & Midranger(Evolved)}</p>
 				<hr>
 			</div>
 
 		</div>
+		<audio controls autoplay style="align:'center'">
+			<source src="Snd003.ogg" type="audio/ogg">
+			Your browser does not support the audio element.
+		</audio>
 	</div>
 </body>
 
