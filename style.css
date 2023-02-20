@@ -1,0 +1,649 @@
+/* Fonts */
+@font-face {
+    font-family: Atarian;
+    src: url('Atarian/SF Atarian System.ttf');
+}
+@font-face {
+    font-family: Atarian;
+    font-weight: bold;
+    src: url('Atarian/SF Atarian System Bold.ttf');
+}
+@font-face {
+    font-family: Atarian;
+    font-style: italic;
+    src: url('Atarian/SF Atarian System Italic.ttf');
+}
+@font-face {
+    font-family: Atarian;
+    font-weight: bold;
+    font-style: italic;
+    src: url('Atarian/SF Atarian System Bold Italic.ttf');
+}
+@font-face {
+    font-family: Saikyo;
+    src: url("saikyo/SAIKYO.otf");
+}
+@font-face {
+    font-family: Nasalization;
+    src: url('nasalization-free/nasalization-rg.otf');
+}
+
+/* Animations */
+@keyframes bganim {
+    100%,
+    0% {
+        /*background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url("bg.png");*/
+        background-position-y: -3px;
+    }
+    25% {
+        /*background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(19, 78, 117, 0.73)),url("bg.png");*/
+        background-position-y: -2px;
+    }
+    50% {
+        /*background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(111, 117, 19, 0.73)),url("bg.png");*/
+        background-position-y: 0px;
+    }
+    75% {
+        /*background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(19, 117, 45, 0.73)),url("bg.png");*/
+        background-position-y: -2px;
+    }
+}
+@keyframes rainbow {
+    100%,
+    0% {
+        background: linear-gradient(to right,
+                rgba(255, 0, 0, 1) 0%,
+                rgba(255, 154, 0, 1) 10%,
+                rgba(208, 222, 33, 1) 20%,
+                rgba(79, 220, 74, 1) 30%,
+                rgba(63, 218, 216, 1) 40%,
+                rgba(47, 201, 226, 1) 50%,
+                rgba(28, 127, 238, 1) 60%,
+                rgba(95, 21, 242, 1) 70%,
+                rgba(186, 12, 248, 1) 80%,
+                rgba(251, 7, 217, 1) 90%,
+                rgba(255, 0, 0, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    9.09% {
+        background: linear-gradient(to right,
+                rgba(255, 0, 0, 1) 0%,
+                rgba(255, 0, 0, 1) 10%,
+                rgba(255, 154, 0, 1) 20%,
+                rgba(208, 222, 33, 1) 30%,
+                rgba(79, 220, 74, 1) 40%,
+                rgba(63, 218, 216, 1) 50%,
+                rgba(47, 201, 226, 1) 60%,
+                rgba(28, 127, 238, 1) 70%,
+                rgba(95, 21, 242, 1) 80%,
+                rgba(186, 12, 248, 1) 90%,
+                rgba(251, 7, 217, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    18.18% {
+        background: linear-gradient(to right,
+                rgba(251, 7, 217, 1) 0%,
+                rgba(255, 0, 0, 1) 10%,
+                rgba(255, 0, 0, 1) 20%,
+                rgba(255, 154, 0, 1) 30%,
+                rgba(208, 222, 33, 1) 40%,
+                rgba(79, 220, 74, 1) 50%,
+                rgba(63, 218, 216, 1) 60%,
+                rgba(47, 201, 226, 1) 70%,
+                rgba(28, 127, 238, 1) 80%,
+                rgba(95, 21, 242, 1) 90%,
+                rgba(186, 12, 248, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    27.27% {
+        background: linear-gradient(to right,
+                rgba(186, 12, 248, 1) 0%,
+                rgba(251, 7, 217, 1) 10%,
+                rgba(255, 0, 0, 1) 20%,
+                rgba(255, 0, 0, 1) 30%,
+                rgba(255, 154, 0, 1) 40%,
+                rgba(208, 222, 33, 1) 50%,
+                rgba(79, 220, 74, 1) 60%,
+                rgba(63, 218, 216, 1) 70%,
+                rgba(47, 201, 226, 1) 80%,
+                rgba(28, 127, 238, 1) 90%,
+                rgba(95, 21, 242, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    36.36% {
+        background: linear-gradient(to right,
+                rgba(95, 21, 242, 1) 0%,
+                rgba(186, 12, 248, 1) 10%,
+                rgba(251, 7, 217, 1) 20%,
+                rgba(255, 0, 0, 1) 30%,
+                rgba(255, 0, 0, 1) 40%,
+                rgba(255, 154, 0, 1) 50%,
+                rgba(208, 222, 33, 1) 60%,
+                rgba(79, 220, 74, 1) 70%,
+                rgba(63, 218, 216, 1) 80%,
+                rgba(47, 201, 226, 1) 90%,
+                rgba(28, 127, 238, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    45.45% {
+        background: linear-gradient(to right,
+                rgba(28, 127, 238, 1) 0%,
+                rgba(95, 21, 242, 1) 10%,
+                rgba(186, 12, 248, 1) 20%,
+                rgba(251, 7, 217, 1) 30%,
+                rgba(255, 0, 0, 1) 40%,
+                rgba(255, 0, 0, 1) 50%,
+                rgba(255, 154, 0, 1) 60%,
+                rgba(208, 222, 33, 1) 70%,
+                rgba(79, 220, 74, 1) 80%,
+                rgba(63, 218, 216, 1) 90%,
+                rgba(47, 201, 226, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    54.54% {
+        background: linear-gradient(to right,
+                rgba(47, 201, 226, 1) 0%,
+                rgba(28, 127, 238, 1) 10%,
+                rgba(95, 21, 242, 1) 20%,
+                rgba(186, 12, 248, 1) 30%,
+                rgba(251, 7, 217, 1) 40%,
+                rgba(255, 0, 0, 1) 50%,
+                rgba(255, 0, 0, 1) 60%,
+                rgba(255, 154, 0, 1) 70%,
+                rgba(208, 222, 33, 1) 80%,
+                rgba(79, 220, 74, 1) 90%,
+                rgba(63, 218, 216, 1) 100%, );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    63.63% {
+        background: linear-gradient(to right,
+                rgba(63, 218, 216, 1) 0%,
+                rgba(47, 201, 226, 1) 10%,
+                rgba(28, 127, 238, 1) 20%,
+                rgba(95, 21, 242, 1) 30%,
+                rgba(186, 12, 248, 1) 40%,
+                rgba(251, 7, 217, 1) 50%,
+                rgba(255, 0, 0, 1) 60%,
+                rgba(255, 0, 0, 1) 70%,
+                rgba(255, 154, 0, 1) 80%,
+                rgba(208, 222, 33, 1) 90%,
+                rgba(79, 220, 74, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    72.72% {
+        background: linear-gradient(to right,
+                rgba(79, 220, 74, 1) 0%,
+                rgba(63, 218, 216, 1) 10%,
+                rgba(47, 201, 226, 1) 20%,
+                rgba(28, 127, 238, 1) 30%,
+                rgba(95, 21, 242, 1) 40%,
+                rgba(186, 12, 248, 1) 50%,
+                rgba(251, 7, 217, 1) 60%,
+                rgba(255, 0, 0, 1) 70%,
+                rgba(255, 0, 0, 1) 80%,
+                rgba(255, 154, 0, 1) 90%,
+                rgba(208, 222, 33, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    81.81% {
+        background: linear-gradient(to right,
+                rgba(208, 222, 33, 1) 0%,
+                rgba(79, 220, 74, 1) 10%,
+                rgba(63, 218, 216, 1) 20%,
+                rgba(47, 201, 226, 1) 30%,
+                rgba(28, 127, 238, 1) 40%,
+                rgba(95, 21, 242, 1) 50%,
+                rgba(186, 12, 248, 1) 60%,
+                rgba(251, 7, 217, 1) 70%,
+                rgba(255, 0, 0, 1) 80%,
+                rgba(255, 0, 0, 1) 90%,
+                rgba(255, 154, 0, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+    90.9% {
+        background: linear-gradient(to right,
+                rgba(255, 154, 0, 1) 0%,
+                rgba(208, 222, 33, 1) 10%,
+                rgba(79, 220, 74, 1) 20%,
+                rgba(63, 218, 216, 1) 30%,
+                rgba(47, 201, 226, 1) 40%,
+                rgba(28, 127, 238, 1) 50%,
+                rgba(95, 21, 242, 1) 60%,
+                rgba(186, 12, 248, 1) 70%,
+                rgba(251, 7, 217, 1) 80%,
+                rgba(255, 0, 0, 1) 90%,
+                rgba(255, 0, 0, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+}
+@keyframes sselect {
+
+    100%,
+    0% {
+        border-color: yellow;
+        margin: 4px;
+    }
+
+    50% {
+        border-color: rgb(255, 0, 255);
+        margin: 4px;
+    }
+}
+@keyframes select {
+
+    100%,
+    0% {
+        border-color: yellow;
+        margin: -4px;
+    }
+
+    50% {
+        border-color: rgb(255, 0, 255);
+        margin: -4px;
+    }
+}
+
+/* Key Element Styles */
+body {
+    font-family: Nasalization;
+    background-image: url("bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /*cursor: url("cursor_select.png"), select;*/
+    background-size: cover;
+    animation: bganim 0.462s linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+hr {
+    text-align: left;
+    color: white;
+    width: 100%;
+    background-color: white;
+    border: none;
+    height: 4px;
+}
+img { width: 80%;}
+ol {text-align: left;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #38444d;
+}
+li {float: left;}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    pointer-events: none;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Everything Else */
+
+.rainbow {
+    animation: rainbow 0.6s linear;
+    animation-iteration-count: infinite;
+    font-size: 150%;
+    text-decoration: none;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 0.75px white;
+    padding: 0.6%;
+    border-radius: 0px;
+}
+
+
+
+.searchselectrainbow {
+    animation: sselect 0.15s linear, rainbow 0.6s linear;
+    animation-iteration-count: infinite;
+    border: 4px solid transparent;
+    font-size: 150%;
+    text-decoration: none;
+    padding: 0.6%;
+    border-radius: 0px;
+}
+
+
+
+.selected {
+    animation: select 0.15s linear;
+    animation-iteration-count: infinite;
+    border: 4px solid transparent;
+    border-radius: 0px;
+}
+
+.searchselect {
+    animation: sselect 0.15s linear;
+    animation-iteration-count: infinite;
+    border: 4px solid transparent;
+    border-radius: 0px;
+}
+
+#ig {
+    border: black;
+    border-radius: 8px;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.uber {
+    color: white;
+    text-decoration: none;
+    border-radius: 0px;
+    padding: 0.6%;
+    font-size: 125%;
+}
+
+.new {
+    color: rgb(141, 255, 238);
+}
+
+input,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: 20px;
+}
+
+.icon:after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    border: 12px solid rgba(255, 0, 0, 0.5);
+}
+
+
+.sidebar {
+    height: 100%;
+    /* Full-height: remove this if you want "auto" height */
+    width: 35.9%;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    right: 0;
+    background-color: rgba(255, 220, 154, 0.8);
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+}
+
+.sidecontent {
+    text-align: center;
+}
+
+.sidebar h3 {
+    padding: 10px;
+}
+
+.sidebar img {
+    width: 20%;
+}
+
+.top-bar {
+    text-align: center;
+    margin: -24px -8px;
+    padding-top: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    /*border: 5px solid black;*/
+    width: 65%;
+}
+
+
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+ul .search-container {
+    float: right;
+}
+
+ul input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 14px;
+    border: none;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+
+ul .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 14.2px;
+    border: none;
+    cursor: pointer;
+}
+
+ul .search-container button:hover {
+    background: #ccc;
+}
+
+a {
+    color: rgb(139, 168, 255);
+}
+
+.searchdropdowncontent {
+    background: rgb(226, 226, 226);
+    width: 221px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.searchdropdowncontent input {
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+.searchdropdowncontent p {
+    text-align: left;
+    align-items: left;
+    align-self: left;
+    align-content: left;
+    padding-left: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: black;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+}
+
+.row {
+    display: flex;
+    margin: -28px 48px -36px;
+}
+
+.column {
+    flex: 33.33%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 16px;
+}
+
+.sets {
+    border: 5px solid black;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.sets .p {
+    color: white;
+}
+
+.sets .input {
+    color: white;
+}
+
+.info {
+    border-color: black;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.dynamites {
+    /*border-color: rgb(255, 34, 0);
+    background-color: rgba(255, 218, 107, 0.7);*/
+}
+
+.lugas {
+    /*border-color: rgb(6, 0, 90);
+    background-color: rgb(214, 138, 255);*/
+}
+
+.wargods {
+    /*border-color: rgb(45, 0, 74);
+    background-color: rgb(255, 113, 73);*/
+}
+
+.ggals {
+    /*border-color: rgb(0, 61, 28);
+    background-color: rgb(255, 132, 220);*/
+}
+
+.heroes {
+    /*background-image: url('battle_cats_BG.png');
+    background-size: 100% auto;
+    background-position-y: bottom;*/
+}
+
+.dragon {}
+
+.heroes {}
+
+.justice {}
+
+.almighties {}
+
+.legion {}
+
+.pixies {}
+
+.monsters {}
+
+.exclusives {}
+
+.interactable-icon:hover {
+    width: 31.5px;
+    height: 31.5px;
+    border: 2px white solid;
+}

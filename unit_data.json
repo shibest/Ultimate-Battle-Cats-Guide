@@ -1,12 +1,7 @@
-//import data from './unit_data.json' assert { type: 'JSON' };
-
-
-let data = JSON.stringify({
+{
     "units": [
         {
             "id": "lesserdemon",
-            "set": "dynamites",
-            "ranking": "1",
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Lesser Demon Cat",
@@ -17,26 +12,10 @@ let data = JSON.stringify({
             "target_abilities": [],
             "general_abilities": [
                 "Weaken-Immune"
-            ],
-            "target_abilities_desc": [],
-            "general_abilities_desc": [
-                ""
-            ],
-            "dmg": 4125,
-            "hp": 5500,
-            "dps": 1820,
-            "cost": 3000,
-            "range": 180,
-            "speed": 12,
-            "kb": 3,
-            "atkrate": 2.27,
-            "atkanim": 0.93,
-            "recharge": 28.20
+            ]
         },
         {
             "id": "lesserdemon",
-            "set": "dynamites",
-            "ranking": "1",
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Greater Demon Cat",
@@ -47,26 +26,10 @@ let data = JSON.stringify({
             "target_abilities": [],
             "general_abilities": [
                 "Weaken-Immune"
-            ],
-            "target_abilities_desc": [],
-            "general_abilities_desc": [
-                ""
-            ],
-            "dmg": 5625,
-            "hp": 7250,
-            "dps": 2482,
-            "cost": 3000,
-            "range": 180,
-            "speed": 12,
-            "kb": 3,
-            "atkrate": 2.27,
-            "atkanim": 0.93,
-            "recharge": 28.20
+            ]
         },
         {
             "id": "lesserdemon",
-            "set": "dynamites",
-            "ranking": "1",
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Greater Balrog Cat",
@@ -77,26 +40,10 @@ let data = JSON.stringify({
             "target_abilities": [],
             "general_abilities": [
                 "Weaken-Immune"
-            ],
-            "target_abilities_desc": [],
-            "general_abilities_desc": [
-                ""
-            ],
-            "dmg": 9375,
-            "hp": 9750,
-            "dps": 4135,
-            "cost": 3000,
-            "range": 180,
-            "speed": 12,
-            "kb": 3,
-            "atkrate": 2.27,
-            "atkanim": 0.93,
-            "recharge": 28.20
+            ]
         },
         {
             "id": "momoco",
-            "set": "dynamites",
-            "ranking": "4",
             "form": "basic",
             "rarity": "Legend Rare",
             "name": "Wonder MOMOCO",
@@ -111,35 +58,14 @@ let data = JSON.stringify({
                 "Multi",
                 "Wave",
                 "Wave-Immune"
-            ],
-            "target_abilities_desc": [
-                "Chance: 100%, Duration: 2s"
-            ],
-            "general_abilities_desc": [
-                "",
-                "Chance: 100%, Level: 8",
-                ""
-            ],
-            "multi": "x3: (1/12 - 0.93s; 1/6 - 1.83s; 3/4 - 3.33s)",
-            "dmg": 9000,
-            "hp": 10000,
-            "dps": 1343,
-            "cost": 4500,
-            "range": 375,
-            "speed": 13,
-            "kb": 2,
-            "atkrate": 6.70,
-            "atkanim": 0.93,
-            "recharge": 124.53
+            ]
         },
         {
             "id": "momoco",
-            "set": "dynamites",
-            "ranking": "4",
             "form": "evolved",
             "rarity": "Legend Rare",
             "name": "Cutie MOMOCO",
-            "description": "The galaxy\'s most stylish detective, cleaning up cosmic crime with her cutting edge Cutie Beam. Area attacks freeze Red/Black/Angels.",
+            "description": "The galaxy\\'s most stylish detective, cleaning up cosmic crime with her cutting edge Cutie Beam. Area attacks freeze Red/Black/Angels.",
             "role": "Crowd-Controller & Waver",
             "attack": "area",
             "target": "Red, Black, Angel",
@@ -150,26 +76,7 @@ let data = JSON.stringify({
                 "Multi",
                 "Wave",
                 "Wave-Immune"
-            ],
-            "target_abilities_desc": [
-                "Chance: 100%, Duration: 2s"
-            ],
-            "general_abilities_desc": [
-                "",
-                "Chance: 100%, Level: 8",
-                ""
-            ],
-            "multi": "x3: (1/12 - 0.93s; 1/6 - 1.83s; 3/4 - 3.33s)",
-            "dmg": 9000,
-            "hp": 10000,
-            "dps": 1343,
-            "cost": 4500,
-            "range": 375,
-            "speed": 13,
-            "kb": 2,
-            "atkrate": 6.70,
-            "atkanim": 0.93,
-            "recharge": 124.53
+            ]
         },
         {
             "id": "ice",
@@ -183,77 +90,35 @@ let data = JSON.stringify({
             "target_abilities": [
                 "Freeze"
             ],
-            "general_abilities": [],
-            "target_abilities_desc": [
-                "Chance: 50%, Duration: 4s"
-            ],
-            "general_abilities_desc": [],
-            "dmg": 2250,
-            "hp": 3500,
-            "dps": 370,
-            "cost": 3300,
-            "range": 325,
-            "speed": 8,
-            "kb": 3,
-            "atkrate": 6.10,
-            "atkanim": 1.80,
-            "recharge": 57.87
+            "general_abilities": []
         },
         {
             "id": "ice",
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Ice Queen Cat",
-            "description": "Forgot to mention that the Cat is an eternal icicle. Don\'t think it complains much. Might stop Red enemies. (Area Attack)",
+            "description": "Forgot to mention that the Cat is an eternal icicle. Don\\'t think it complains much. Might stop Red enemies. (Area Attack)",
             "role": "Crowd-Controller & Midranger",
             "attack": "area",
             "target": "Red",
             "target_abilities": [
                 "Freeze"
             ],
-            "general_abilities": [],
-            "target_abilities_desc": [
-                "Chance: 50%, Duration: 4s"
-            ],
-            "general_abilities_desc": [],
-            "dmg": 3250,
-            "hp": 5000,
-            "dps": 532,
-            "cost": 3300,
-            "range": 325,
-            "speed": 8,
-            "kb": 3,
-            "atkrate": 6.10,
-            "atkanim": 1.80,
-            "recharge": 57.87
+            "general_abilities": []
         },
         {
             "id": "ice",
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Ice Crystal Cat",
-            "description": "The Ice Queen\'s reign grows more secure and so does her Cat companion\'s crystal shell. Freezes Red enemies in place (Area Attack).",
+            "description": "The Ice Queen\\'s reign grows more secure and so does her Cat companion\\'s crystal shell. Freezes Red enemies in place (Area Attack).",
             "role": "Crowd-Controller & Backliner",
             "attack": "area",
             "target": "Red",
             "target_abilities": [
                 "Freeze"
             ],
-            "general_abilities": [],
-            "target_abilities_desc": [
-                "Chance: 100%, Duration: 4s"
-            ],
-            "general_abilities_desc": [],
-            "dmg": 4500,
-            "hp": 5000,
-            "dps": 738,
-            "cost": 3300,
-            "range": 425,
-            "speed": 8,
-            "kb": 3,
-            "atkrate": 6.10,
-            "atkanim": 1.80,
-            "recharge": 57.87
+            "general_abilities": []
         },
         {
             "id": "machine",
@@ -267,21 +132,7 @@ let data = JSON.stringify({
             "target_abilities": [
                 "Resistant"
             ],
-            "general_abilities": [],
-            "target_abilities_desc": [
-                "x4~5 HP"
-            ],
-            "general_abilities_desc": [],
-            "dmg": 8750,
-            "hp": 12000,
-            "dps": 715,
-            "cost": 3600,
-            "range": 140,
-            "speed": 9,
-            "kb": 1,
-            "atkrate": 12.23,
-            "atkanim": 5.60,
-            "recharge": 64.53
+            "general_abilities": []
         },
         {
             "id": "machine",
@@ -295,25 +146,7 @@ let data = JSON.stringify({
             "target_abilities": [
                 "Resistant"
             ],
-            "general_abilities": [
-                "Wave-Immune"
-            ],
-            "target_abilities_desc": [
-                "x4~5 HP"
-            ],
-            "general_abilities_desc": [
-                ""
-            ],
-            "dmg": 13888,
-            "hp": 15000,
-            "dps": 1135,
-            "cost": 3600,
-            "range": 140,
-            "speed": 9,
-            "kb": 1,
-            "atkrate": 12.23,
-            "atkanim": 5.60,
-            "recharge": 64.53
+            "general_abilities": []
         },
         {
             "id": "machine",
@@ -329,23 +162,7 @@ let data = JSON.stringify({
             ],
             "general_abilities": [
                 "Wave-Shield"
-            ],
-            "target_abilities_desc": [
-                "x4~5 HP"
-            ],
-            "general_abilities_desc": [
-                ""
-            ],
-            "dmg": 13888,
-            "hp": 22500,
-            "dps": 1560,
-            "cost": 3600,
-            "range": 190,
-            "speed": 15,
-            "kb": 1,
-            "atkrate": 8.90,
-            "atkanim": 5.60,
-            "recharge": 64.53
+            ]
         },
         {
             "id": "marauder",
@@ -359,21 +176,7 @@ let data = JSON.stringify({
             "target_abilities": [],
             "general_abilities": [
                 "Critical"
-            ],
-            "target_abilities_desc": [],
-            "general_abilities_desc": [
-                "Chance: 20%, x2 DMG (ignore Metal)"
-            ],
-            "dmg": 500,
-            "hp": 3250,
-            "dps": 100,
-            "cost": 2250,
-            "range": 195,
-            "speed": 7,
-            "kb": 3,
-            "atkrate": 5.00,
-            "atkanim": 1.03,
-            "recharge": 47.87
+            ]
         },
         {
             "id": "marauder",
@@ -387,58 +190,28 @@ let data = JSON.stringify({
             "target_abilities": [],
             "general_abilities": [
                 "Critical"
-            ],
-            "target_abilities_desc": [],
-            "general_abilities_desc": [
-                "Chance: 40%, x2 DMG (ignore Metal)"
-            ],
-            "dmg": 750,
-            "hp": 4500,
-            "dps": 150,
-            "cost": 2250,
-            "range": 195,
-            "speed": 7,
-            "kb": 3,
-            "atkrate": 5.00,
-            "atkanim": 1.03,
-            "recharge": 47.87
+            ]
         },
         {
             "id": "marauder",
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Paladin Cat",
-            "description": "This Cat\'s righteous heart finally conquered the cursed sword, turning it into a holy axe. Might critical attack. (Area Attack)",
+            "description": "This Cat\\'s righteous heart finally conquered the cursed sword, turning it into a holy axe. Might critical attack. (Area Attack)",
             "role": "Critter",
             "attack": "area",
             "target": "None",
             "target_abilities": [],
             "general_abilities": [
-                "Critical",
-                "Knockback-Immune"
-            ],
-            "target_abilities_desc": [],
-            "general_abilities_desc": [
-                "Chance: 50%, x2 DMG (ignore Metal)",
-                ""
-            ],
-            "dmg": 1000,
-            "hp": 5750,
-            "dps": 200,
-            "cost": 2250,
-            "range": 245,
-            "speed": 7,
-            "kb": 3,
-            "atkrate": 5.00,
-            "atkanim": 1.03,
-            "recharge": 47.87
+                "Critical"
+            ]
         },
         {
             "id": "baby",
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Baby Cat",
-            "description": "A baby Cat that still can\'t do anything by itself. Luckily, daddy is there to help. Might knockback Floating & Aliens (Area Atk)",
+            "description": "A baby Cat that still can\\'t do anything by itself. Luckily, daddy is there to help. Might knockback Floating & Aliens (Area Atk)",
             "role": "Nuker & Melee",
             "attack": "area",
             "target": "Floating, Alien",
@@ -447,12 +220,6 @@ let data = JSON.stringify({
             ],
             "general_abilities": [
                 "Freeze-Immune"
-            ],
-            "target_abilities_desc": [
-
-            ],
-            "general_abilities_desc": [
-                ""
             ]
         },
         {
@@ -476,7 +243,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Cats in the Cradle",
-            "description": "Even 7 kittens together can\'t do much... Luckily Dad\'s still keeping an eye out for bullies. Area wave attacks knockback Floating/Alien.",
+            "description": "Even 7 kittens together can\\'t do much... Luckily Dad\\'s still keeping an eye out for bullies. Area wave attacks knockback Floating/Alien.",
             "role": "Nuker & Melee",
             "attack": "area",
             "target": "Floating, Alien",
@@ -636,7 +403,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Lasvoss Reborn",
-            "description": "Will arise only on the eve of the world\'s destruction. Cloaked in darkness, his claws obliterate naive heroes, leaving no trace of their pitiful existence.",
+            "description": "Will arise only on the eve of the world\\'s destruction. Cloaked in darkness, his claws obliterate naive heroes, leaving no trace of their pitiful existence.",
             "role": "Nuker",
             "attack": "area",
             "target": "None",
@@ -734,7 +501,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Legend Rare",
             "name": "Legeluga",
-            "description": "Not sure if this is a Cat... There\'s just something about that pandimensional crystal...",
+            "description": "Not sure if this is a Cat... There\\'s just something about that pandimensional crystal...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -746,7 +513,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Legend Rare",
             "name": "Legelan Pasalan",
-            "description": "Gaze upon its might and tremble! There\'s no doubt that this one is immune to Wave damage (Omni-Strike)",
+            "description": "Gaze upon its might and tremble! There\\'s no doubt that this one is immune to Wave damage (Omni-Strike)",
             "role": "Rusher",
             "attack": "area",
             "target": "None",
@@ -778,7 +545,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Unknown Cat",
-            "description": "God, I don\'t know if this is a Cat anymore. Seriously, I give up. Knockbacks enemies. (Area Atk.)",
+            "description": "God, I don\\'t know if this is a Cat anymore. Seriously, I give up. Knockbacks enemies. (Area Atk.)",
             "role": "Super-Backliner & Crowd-Controller",
             "attack": "area",
             "target": "All Except Metal",
@@ -807,7 +574,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Asiluga",
-            "description": "Not sure if this is a Cat... There\'s just something about those legs...",
+            "description": "Not sure if this is a Cat... There\\'s just something about those legs...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -847,7 +614,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Kubiluga",
-            "description": "Not sure if this is a Cat... There\'s just something about that neck...",
+            "description": "Not sure if this is a Cat... There\\'s just something about that neck...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -859,7 +626,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Kubilan Pasalan",
-            "description": "You can\'t be serious. Really?! Seems like this one knocks back enemies from afar.",
+            "description": "You can\\'t be serious. Really?! Seems like this one knocks back enemies from afar.",
             "role": "Backliner & Crowd-Controller",
             "attack": "single",
             "target": "All Except Metal",
@@ -890,7 +657,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Tecoluga",
-            "description": "Not sure if this is a Cat... There\'s just something about those arms...",
+            "description": "Not sure if this is a Cat... There\\'s just something about those arms...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -916,7 +683,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Lufalan Pasalan",
-            "description": "It seems like this one is a straw-hatted pirate of some kind. But we really can\'t be sure. Massive damage vs. one enemy. (Might Crit.)",
+            "description": "It seems like this one is a straw-hatted pirate of some kind. But we really can\\'t be sure. Massive damage vs. one enemy. (Might Crit.)",
             "role": "Nuker & Super-Backliner",
             "attack": "single",
             "target": "None",
@@ -930,7 +697,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Balaluga",
-            "description": "Not sure if this is a Cat... There\'s just something about that belly...",
+            "description": "Not sure if this is a Cat... There\\'s just something about that belly...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -942,7 +709,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Balalan Pasalan",
-            "description": "No. Way. This can\'t be right... Seems like this one freezes all enemies in range.",
+            "description": "No. Way. This can\\'t be right... Seems like this one freezes all enemies in range.",
             "role": "Crowd-Controller & Super-Backliner",
             "attack": "area",
             "target": "All",
@@ -971,7 +738,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Togeluga",
-            "description": "Not sure if this is a Cat... There\'s just something about those... spikes???",
+            "description": "Not sure if this is a Cat... There\\'s just something about those... spikes???",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -983,7 +750,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Togelan Pasalan",
-            "description": "No. Way. This can\'t be right... Survives one lethal strike, get stronger the more damage he takes. (Area Attack)",
+            "description": "No. Way. This can\\'t be right... Survives one lethal strike, get stronger the more damage he takes. (Area Attack)",
             "role": "Backliner & Nuker",
             "attack": "area",
             "target": "None",
@@ -1015,7 +782,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Nobiluga",
-            "description": "Not sure if this is a Cat... There\'s just something about that cool \'stache...",
+            "description": "Not sure if this is a Cat... There\\'s just something about that cool \\'stache...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -1027,7 +794,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Nobilan Pasalan",
-            "description": "I can\'t stand it anymore... Seems like this one is immune to Wave attacks. (Long Range Area Attack)",
+            "description": "I can\\'t stand it anymore... Seems like this one is immune to Wave attacks. (Long Range Area Attack)",
             "role": "Sniper",
             "attack": "area",
             "target": "None",
@@ -1071,7 +838,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Papaluga",
-            "description": "Not sure if this is a Cat... There\'s just something about that toothless smile...",
+            "description": "Not sure if this is a Cat... There\\'s just something about that toothless smile...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -1118,7 +885,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Furiluga",
-            "description": "Not sure if this is a Cat... There\'s just something about those burning locks of hair...",
+            "description": "Not sure if this is a Cat... There\\'s just something about those burning locks of hair...",
             "role": "None",
             "attack": "single",
             "target": "None",
@@ -1195,7 +962,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Wargod Yukimura",
-            "description": "Activated the armor\'s hidden function \"Jet Boosters\". No stopping it now! Deals massive damage to Black enemies.",
+            "description": "Activated the armor\\'s hidden function \"Jet Boosters\". No stopping it now! Deals massive damage to Black enemies.",
             "role": "Rusher & Nuker",
             "attack": "area",
             "target": "Black",
@@ -1260,7 +1027,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Immortal Keiji",
-            "description": "As the cherries blossom, so does Keiji\'s battle fury. Resistant to Black, immune to Wave attacks. Area attacks grow stronger as he takes damage.",
+            "description": "As the cherries blossom, so does Keiji\\'s battle fury. Resistant to Black, immune to Wave attacks. Area attacks grow stronger as he takes damage.",
             "role": "Midranger & Tanker",
             "attack": "area",
             "target": "Black",
@@ -1291,7 +1058,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Wargod Nobunaga",
-            "description": "The Cat\'s spirit goes into overdrive. The grudge grows even stronger. (Area Attack) Stops the movement of Black enemies.",
+            "description": "The Cat\\'s spirit goes into overdrive. The grudge grows even stronger. (Area Attack) Stops the movement of Black enemies.",
             "role": "Crowd-Controller",
             "attack": "area",
             "target": "Black",
@@ -1333,7 +1100,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Wargod Masamune",
-            "description": "Cat Shield\'s Hell Mode - activate! Infernal (Area) attacks slice through his foes! Might knock back Black and Red enemies.",
+            "description": "Cat Shield\\'s Hell Mode - activate! Infernal (Area) attacks slice through his foes! Might knock back Black and Red enemies.",
             "role": "Crowd-Controller & Midranger",
             "attack": "area",
             "target": "Red, Black",
@@ -1375,7 +1142,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Wargod Shingen",
-            "description": "Cat Sword\'s Tactics Mode - activate! Even greater destructive power! Area attacks only damage Black/Aliens.",
+            "description": "Cat Sword\\'s Tactics Mode - activate! Even greater destructive power! Area attacks only damage Black/Aliens.",
             "role": "Nuker",
             "attack": "area",
             "target": "Black, Alien",
@@ -1389,7 +1156,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Immortal Shingen",
-            "description": "The Cat Sword\'s path of destruction is unstoppable. There is no mercy to be given. Area attacks only damage Black/Aliens.",
+            "description": "The Cat Sword\\'s path of destruction is unstoppable. There is no mercy to be given. Area attacks only damage Black/Aliens.",
             "role": "Nuker",
             "attack": "area",
             "target": "Black, Alien",
@@ -1550,7 +1317,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Shiro Amakusa",
-            "description": "Clockwork creation imbued with a young zealot\'s soul. Driven to bloody battle for his righteous cause. Massive Area damage vs Aku and Black enemies.",
+            "description": "Clockwork creation imbued with a young zealot\\'s soul. Driven to bloody battle for his righteous cause. Massive Area damage vs Aku and Black enemies.",
             "role": "?",
             "attack": "area",
             "target": "Aku, Black",
@@ -1655,7 +1422,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Legend Rare",
             "name": "Headmistress Jeanne ψ",
-            "description": "Her educational philosophy has become more... unforgiving lately. But who\'s going to complain? Insane damage to Red/Floating. (Long-Range/Area)",
+            "description": "Her educational philosophy has become more... unforgiving lately. But who\\'s going to complain? Insane damage to Red/Floating. (Long-Range/Area)",
             "role": "Nuker & Sniper",
             "attack": "area",
             "target": "Red, Floating",
@@ -1741,7 +1508,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Divine Thundia",
-            "description": "When you have a goddess\' body, it\'s tough to find clothes that fit. Long distance Area Attacks deliver massive damage to Red enemies.",
+            "description": "When you have a goddess\\' body, it\\'s tough to find clothes that fit. Long distance Area Attacks deliver massive damage to Red enemies.",
             "role": "Nuker & Backliner",
             "attack": "area",
             "target": "Red",
@@ -1783,7 +1550,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Divine Kuu",
-            "description": "Treat her like a weakling and you\'ll know true pain. Your apologies will only make the staff smash down harder. Strong against Red/Black (Area Attack).",
+            "description": "Treat her like a weakling and you\\'ll know true pain. Your apologies will only make the staff smash down harder. Strong against Red/Black (Area Attack).",
             "role": "?",
             "attack": "area",
             "target": "Red, Black",
@@ -1862,7 +1629,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Coppermine, type κ",
-            "description": "Doesn\'t smile that often. (Area Attack) In front of cats, however.. different story. Might stop floating enemies.",
+            "description": "Doesn\\'t smile that often. (Area Attack) In front of cats, however.. different story. Might stop floating enemies.",
             "role": "Crowd-Controller & Midranger",
             "attack": "area",
             "target": "Floating",
@@ -1876,7 +1643,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Divine Coppermine",
-            "description": "What can you do for her that her favorite cat doesn\'t already? Come back in 100 years, kid. Might stop Floating(Area Attack)",
+            "description": "What can you do for her that her favorite cat doesn\\'t already? Come back in 100 years, kid. Might stop Floating(Area Attack)",
             "role": "Crowd - Controller & Midranger",
             "attack": "area",
             "target": "Floating",
@@ -1892,7 +1659,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Kalisa",
-            "description": "Almost obliterated her school on the first day of class with her sword\'s dark magic. Massive damage against Angels. (Area Attack)",
+            "description": "Almost obliterated her school on the first day of class with her sword\\'s dark magic. Massive damage against Angels. (Area Attack)",
             "role": "Rusher & Nuker",
             "attack": "area",
             "target": "Angel",
@@ -1983,7 +1750,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Myrcia",
-            "description": "Money couldn\'t buy happiness, but it bought a small arsenal that very much brings a smile to her face. Wave Attacks, might dodge Traitless enemy attacks.",
+            "description": "Money couldn\\'t buy happiness, but it bought a small arsenal that very much brings a smile to her face. Wave Attacks, might dodge Traitless enemy attacks.",
             "role": "?",
             "attack": "area",
             "target": "Traitless",
@@ -2000,7 +1767,7 @@ let data = JSON.stringify({
             "form": "evolved",
             "rarity": "Uber Rare",
             "name": "Myrcia, type ξ",
-            "description": "RoboButler is endlessly apologizing for Myr\'s rich-girl faux pas (and the trail of destruction left in her wake). Wave Attacks, might dodge Traitless enemy attacks.",
+            "description": "RoboButler is endlessly apologizing for Myr\\'s rich-girl faux pas (and the trail of destruction left in her wake). Wave Attacks, might dodge Traitless enemy attacks.",
             "role": "?",
             "attack": "area",
             "target": "Traitless",
@@ -2017,7 +1784,7 @@ let data = JSON.stringify({
             "form": "true",
             "rarity": "Uber Rare",
             "name": "Divine Myrcia",
-            "description": "Bourgeois space princess living a high-class life, but can\'t resist cravings for cheap cheeseburgers. Wave attacks, might dodge Traitless enemy attacks.",
+            "description": "Bourgeois space princess living a high-class life, but can\\'t resist cravings for cheap cheeseburgers. Wave attacks, might dodge Traitless enemy attacks.",
             "role": "?",
             "attack": "area",
             "target": "Traitless",
@@ -2205,7 +1972,7 @@ let data = JSON.stringify({
             "form": "basic",
             "rarity": "Uber Rare",
             "name": "Baby Gao",
-            "description": "Might be a crybaby but he\'s still young! He just doesn\'t realize the power within himself. Strong against every enemy with a trait. (Area Atk)",
+            "description": "Might be a crybaby but he\\'s still young! He just doesn\\'t realize the power within himself. Strong against every enemy with a trait. (Area Atk)",
             "role": "Midranger",
             "attack": "area",
             "target": "All Except Traitless",
@@ -2241,17 +2008,7 @@ let data = JSON.stringify({
             "attack": "unknown",
             "target": "Unknown",
             "target_abilities": [],
-            "general_abilities": [],
-            "dmg": 0,
-            "hp": 0,
-            "dps": 0,
-            "cost": "?",
-            "range": "?",
-            "speed": "?",
-            "kb": "?",
-            "atkrate": "?",
-            "atkanim": "?",
-            "recharge": "?"
+            "general_abilities": []
         },
         {
             "id": "unknown",
@@ -2263,17 +2020,7 @@ let data = JSON.stringify({
             "attack": "unknown",
             "target": "Unknown",
             "target_abilities": [],
-            "general_abilities": [],
-            "dmg": 0,
-            "hp": 0,
-            "dps": 0,
-            "cost": "?",
-            "range": "?",
-            "speed": "?",
-            "kb": "?",
-            "atkrate": "?",
-            "atkanim": "?",
-            "recharge": "?"
+            "general_abilities": []
         },
         {
             "id": "unknown",
@@ -2285,1024 +2032,7 @@ let data = JSON.stringify({
             "attack": "unknown",
             "target": "Unknown",
             "target_abilities": [],
-            "general_abilities": [],
-            "dmg": 0,
-            "hp": 0,
-            "dps": 0,
-            "cost": "?",
-            "range": "?",
-            "speed": "?",
-            "kb": "?",
-            "atkrate": "?",
-            "atkanim": "?",
-            "recharge": "?"
+            "general_abilities": []
         }
     ]
-});
-
-//console.log(data);
-const obj = JSON.parse(data);
-
-
-
-let songs = ["music/1.ogg", "music/2.ogg", "music/3.ogg", "music/4.ogg", "music/5.ogg", "music/6.ogg", "music/7.ogg", "music/8.ogg", "music/9.ogg"];
-
-
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-// --------------------------Change Content Functions---------------------------------
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-
-function removeExistingAbilities() {
-    document.getElementById("Omnistrike").style.display = "none";
-    document.getElementById("Long-Distance").style.display = "none";
-    document.getElementById("Strengthen").style.display = "none";
-    document.getElementById("Survive").style.display = "none";
-    document.getElementById("Base-Destroyer").style.display = "none";
-    document.getElementById("Critical").style.display = "none";
-    document.getElementById("Metal").style.display = "none";
-    document.getElementById("Zombie-Killer").style.display = "none";
-    document.getElementById("Soulstrike").style.display = "none";
-    document.getElementById("Barrier-Breaker").style.display = "none";
-    document.getElementById("Shield-Piercing").style.display = "none";
-    document.getElementById("Savage-Blow").style.display = "none";
-    document.getElementById("Extra-Money").style.display = "none";
-    document.getElementById("Wave").style.display = "none";
-    document.getElementById("Mini-Wave").style.display = "none";
-    document.getElementById("Surge").style.display = "none";
-    document.getElementById("Wave-Shield").style.display = "none";
-    document.getElementById("Colossus-Slayer").style.display = "none";
-    document.getElementById("Behemoth-Slayer").style.display = "none";
-    document.getElementById("Weaken-Immune").style.display = "none";
-    document.getElementById("Freeze-Immune").style.display = "none";
-    document.getElementById("Slow-Immune").style.display = "none";
-    document.getElementById("Knockback-Immune").style.display = "none";
-    document.getElementById("Wave-Immune").style.display = "none";
-    document.getElementById("Surge-Immune").style.display = "none";
-    document.getElementById("Warp-Immune").style.display = "none";
-    document.getElementById("Curse-Immune").style.display = "none";
-    document.getElementById("Toxic-Immune").style.display = "none";
-    document.getElementById("Witch-Killer").style.display = "none";
-    document.getElementById("Eva-Angel-Killer").style.display = "none";
-    document.getElementById("Weaken").style.display = "none";
-    document.getElementById("Freeze").style.display = "none";
-    document.getElementById("Slow").style.display = "none";
-    document.getElementById("Attacks-Only").style.display = "none";
-    document.getElementById("Strong").style.display = "none";
-    document.getElementById("Resistant").style.display = "none";
-    document.getElementById("Insanely-Tough").style.display = "none";
-    document.getElementById("Massive-Damage").style.display = "none";
-    document.getElementById("Insane-Damage").style.display = "none";
-    document.getElementById("Knockback").style.display = "none";
-    document.getElementById("Curse").style.display = "none";
-    document.getElementById("Dodge").style.display = "none";
 }
-function removeAllSelectAnimations() {
-    for (let i = 0; i < obj.units.length; i++) {
-        if (document.getElementById(obj.units[i].id.toString()) != null) {
-            if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselect")) {
-                document.getElementById(obj.units[i].id.toString()).classList.remove("searchselect");
-            }
-            if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselectrainbow")) {
-                document.getElementById(obj.units[i].id.toString()).classList.remove("searchselectrainbow");
-            }
-        }
-    }
-    if (document.getElementById("basic").classList.contains('selected')) {
-        document.getElementById("basic").classList.remove('selected');
-    }
-    if (document.getElementById("evolved").classList.contains('selected')) {
-        document.getElementById("evolved").classList.remove('selected');
-    }
-    if (document.getElementById("true").classList.contains('selected')) {
-        document.getElementById("true").classList.remove('selected');
-    }
-}
-function removeSomeSelectAnimations() {
-    if (document.getElementById("basic").classList.contains('selected')) {
-        document.getElementById("basic").classList.remove('selected');
-    }
-    if (document.getElementById("evolved").classList.contains('selected')) {
-        document.getElementById("evolved").classList.remove('selected');
-    }
-    if (document.getElementById("true").classList.contains('selected')) {
-        document.getElementById("true").classList.remove('selected');
-    }
-}
-function updateStats(that) {
-    let level = Math.abs(parseInt(that.value));
-    var id = that.name;
-
-    let unit = findBySearchTerm(obj.units, id);    
-
-    document.getElementById("hp").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp);
-    document.getElementById("dmg").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg);
-    document.getElementById("dps").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps);
-
-    var hpx = 1;
-    var dmgx = 1;
-    var dpsx = 1;
-    if (document.getElementById("Strong").style.display != "none"){
-        hpx = 2;
-        dmgx = 1.5;
-        dpsx = 1.5;
-    }
-    if (document.getElementById("Resistant").style.display != "none"){
-        hpx = 4;
-    }
-    if (document.getElementById("Insanely-Tough").style.display != "none"){
-        hpx = 6;
-    }
-    if (document.getElementById("Massive-Damage").style.display != "none"){
-        dmgx = 3;
-        dpsx = 3;
-    }
-    if (document.getElementById("Insane-Damage").style.display != "none"){
-        dmgx = 5;
-        dpsx = 5;
-    }
-    document.getElementById("hpx").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp) * hpx;
-    document.getElementById("dmgx").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg) * dmgx;
-    document.getElementById("dpsx").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps) * dpsx;
-}
-
-function changeSideContent(button) {
-    // Send user to top of sidebar and clear past data
-    window.location.href = "#anchor";
-    removeExistingAbilities();
-    removeAllSelectAnimations();
-
-    // Get id of unit
-    var txt = button.id;
-    let basic = "basic";
-
-    // Get unit information with id and set unit name
-    let unit = findByIdAndForm(obj.units, txt, basic);
-
-    // Play animation and sound on unit name press
-    if (unit.rarity.toString() === "Legend Rare") {
-        document.getElementById(txt.toString()).classList.add("searchselectrainbow");
-        document.getElementById("specialpress").pause();
-        document.getElementById("specialpress").currentTime = 0;
-        document.getElementById("specialpress").play();
-    }
-    else {
-        document.getElementById(txt.toString()).classList.add("searchselect");
-        document.getElementById("buttonpress").pause();
-        document.getElementById("buttonpress").currentTime = 0;
-        document.getElementById("buttonpress").play();
-    }
-
-    // Change unit name, in-game image, and form
-    document.getElementById("unit").innerText = unit.name;
-    document.getElementById("ig").src = "cat-ig/" + txt.toString() + "-basicIG.png";
-    document.getElementById("form").innerText = "Basic Form";
-
-    // Change unit icon images and remove last one if unit is legend rare and select basic form
-    document.getElementById("basic").src = "cat-icons/" + txt.toString() + "-basic.png";
-    document.getElementById("evolved").src = "cat-icons/" + txt.toString() + "-evolved.png";
-    document.getElementById("true").src = "cat-icons/" + txt.toString() + "-true.png";
-    if (button.classList.contains("rainbow")) { document.getElementById("true").style.display = "none"; }
-    else { document.getElementById("true").style.display = "inline"; }
-    document.getElementById("basic").classList.add('selected');
-
-    // Set unit role and description	
-    document.getElementById("desc").innerText = unit.description;
-    document.getElementById("role").innerText = "Role: " + unit.role;
-
-    // Set unit attack target
-    if (unit.general_abilities.some(item => item === 'Multi')) {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + "Multi.png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack + Multi-Hit";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = unit.multi;
-        document.getElementById("ATtooltip").innerText = txt;
-    }
-    else {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + ".png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = "";
-        document.getElementById("ATtooltip").innerText = txt;
-    }
-    document.getElementById("targettraits").innerText = unit.target;
-
-    // Add unit general abilities
-    let general_abilities_list = "";
-    for (let i = 0; i < unit.general_abilities.length; i++) {
-        let start = 0;
-        if (unit.general_abilities[0] === "Multi") {
-            start += 1;
-        }
-        if (unit.general_abilities[i] !== "Multi") {
-            if (i > start) {
-                general_abilities_list += ", ";
-            }
-            document.getElementById(unit.general_abilities[i]).style.display = "inline-block";
-            document.getElementById(unit.general_abilities[i]).alt = unit.name;
-            document.getElementById(unit.general_abilities[i]).name = unit.general_abilities_desc[i];
-            general_abilities_list += unit.general_abilities[i];
-        }
-
-    }
-    document.getElementById("GAtooltip").innerText = general_abilities_list;
-
-    // Add unit target abilities
-    let target_abilities_list = "";
-    for (let i = 0; i < unit.target_abilities.length; i++) {
-        if (i > 0) {
-            target_abilities_list += ", ";
-        }
-        document.getElementById(unit.target_abilities[i]).style.display = "inline-block";
-        document.getElementById(unit.target_abilities[i]).alt = unit.name;
-        document.getElementById(unit.target_abilities[i]).name = unit.target_abilities_desc[i];
-        target_abilities_list += unit.target_abilities[i];
-    }
-    document.getElementById("TAtooltip").innerText = target_abilities_list;
-
-    
-    document.getElementById("lvl").name = unit.name;
-
-    let level = Math.abs(parseInt(document.getElementById("lvl").value));
-
-    document.getElementById("hp").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp);
-    document.getElementById("dmg").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg);
-    document.getElementById("dps").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps);
-
-    var hpxmi = 1;
-    var dmgxmi = 1;
-    var dpsxmi = 1;
-    var hpxma = 1;
-    var dmgxma = 1;
-    var dpsxma = 1;
-    if (document.getElementById("Strong").style.display != "none"){
-        hpxmi = 2;
-        dmgxmi = 1.5;
-        dpsxmi = 1.5;
-        hpxma = 2.5;
-        dmgxma = 1.8;
-        dpsxma = 1.8;
-    }
-    if (document.getElementById("Resistant").style.display != "none"){
-        hpxmi = 4;
-        hpxma = 5;
-    }
-    if (document.getElementById("Insanely-Tough").style.display != "none"){
-        hpxmi = 6;
-        hpxma = 7;
-    }
-    if (document.getElementById("Massive-Damage").style.display != "none"){
-        dmgxmi = 3;
-        dpsxmi = 3;
-        dmgxma = 4;
-        dpsxma = 4;
-    }
-    if (document.getElementById("Insane-Damage").style.display != "none"){
-        dmgxmi = 5;
-        dpsxmi = 5;
-        dmgxma = 6;
-        dpsxma = 6;
-    }
-    document.getElementById("hpx").innerText = "x"+hpxmi+"~"+hpxma;//Math.round((level-1)*(unit.hp*0.2) + unit.hp) * hpx;
-    document.getElementById("dmgx").innerText = "x"+dmgxmi+"~"+dmgxma;//Math.round((level-1)*(unit.dmg*0.2) + unit.dmg) * dmgx;
-    document.getElementById("dpsx").innerText = "x"+dpsmi+"~"+dpsma;//Math.round((level-1)*(unit.dps*0.2) + unit.dps) * dpsx;
-
-    document.getElementById("cost").innerText = unit.cost + "¢";
-    document.getElementById("range").innerText = unit.range;
-    document.getElementById("spd").innerText = unit.speed;
-    document.getElementById("kb").innerText = unit.kb;
-    document.getElementById("atkrate").innerText = unit.atkrate + "s";
-    document.getElementById("atkanim").innerText = unit.atkanim + "s";
-    document.getElementById("recharge").innerText = unit.recharge + "s";
-    
-
-    return false;
-}
-function changeIGImage(image) {
-
-    // Get unit form
-    var id = image.id;
-
-    // Get unit id from image src url
-    var src = image.src;
-    var srcsp1 = src.substr(76);
-    var srcsp2 = srcsp1.slice(0, -4);
-    var srcsp3 = srcsp2.slice(0, -(id.length + 1));
-
-    // Get unit info
-    let unit = findByIdAndForm(obj.units, srcsp3, id);
-
-    // Remove all animations and readd animations
-    removeSomeSelectAnimations();
-    image.classList.add('selected');
-
-    // Set unit name, ig picture, form, description and role
-    document.getElementById("unit").innerText = unit.name;
-    document.getElementById("ig").src = "cat-ig/" + srcsp2 + "IG.png";
-    const form = id.charAt(0).toUpperCase() + id.slice(1);
-    document.getElementById("form").innerText = form + " Form";
-    document.getElementById("desc").innerText = unit.description;
-    document.getElementById("role").innerText = "Role: " + unit.role;
-
-    // Set unit attack target
-    if (unit.general_abilities.some(item => item === 'Multi')) {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + "Multi.png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack + Multi-Hit";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = unit.multi;
-        document.getElementById("ATtooltip").innerText = txt;
-    } else {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + ".png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = "";
-        document.getElementById("ATtooltip").innerText = txt;
-    }
-    document.getElementById("targettraits").innerText = unit.target;
-
-    removeExistingAbilities();
-
-    // Set unit general abilities
-    let general_abilities_list = "";
-    for (let i = 0; i < unit.general_abilities.length; i++) {
-        let start = 0;
-        if (unit.general_abilities[0] === "Multi") {
-            start += 1;
-        }
-        if (i > start) {
-            general_abilities_list += ", ";
-        }
-        if (unit.general_abilities[i] !== "Multi") {
-            document.getElementById(unit.general_abilities[i]).style.display = "inline-block";
-            document.getElementById(unit.general_abilities[i]).alt = unit.name;
-            document.getElementById(unit.general_abilities[i]).name = unit.general_abilities_desc[i];
-            general_abilities_list += unit.general_abilities[i];
-        }
-    }
-    document.getElementById("GAtooltip").innerText = general_abilities_list;
-
-    // Set unit target abilities
-    let target_abilities_list = "";
-    for (let i = 0; i < unit.target_abilities.length; i++) {
-        if (i > 0) {
-            target_abilities_list += ", ";
-        }
-        document.getElementById(unit.target_abilities[i]).style.display = "inline-block";
-        document.getElementById(unit.target_abilities[i]).alt = unit.name;
-        document.getElementById(unit.target_abilities[i]).name = unit.target_abilities_desc[i];
-        target_abilities_list += unit.target_abilities[i];
-    }
-    document.getElementById("TAtooltip").innerText = target_abilities_list;
-
-    // Funny noise if unknown image
-    if (image.src.includes("unknown")) {
-        document.getElementById("unknownpress").pause();
-        document.getElementById("unknownpress").currentTime = 0;
-        document.getElementById("unknownpress").play();
-    } else {
-        document.getElementById("buttonpress").pause();
-        document.getElementById("buttonpress").currentTime = 0;
-        document.getElementById("buttonpress").play();
-    }
-
-    document.getElementById("lvl").name = unit.name;
-
-    let level = Math.abs(parseInt(document.getElementById("lvl").value));
-
-    document.getElementById("hp").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp);
-    document.getElementById("dmg").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg);
-    document.getElementById("dps").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps);
-
-    var hpx = 1;
-    var dmgx = 1;
-    var dpsx = 1;
-    if (document.getElementById("Strong").style.display != "none"){
-        hpx = 2;
-        dmgx = 1.5;
-        dpsx = 1.5;
-    }
-    if (document.getElementById("Resistant").style.display != "none"){
-        hpx = 4;
-    }
-    if (document.getElementById("Insanely-Tough").style.display != "none"){
-        hpx = 6;
-    }
-    if (document.getElementById("Massive-Damage").style.display != "none"){
-        dmgx = 3;
-        dpsx = 3;
-    }
-    if (document.getElementById("Insane-Damage").style.display != "none"){
-        dmgx = 5;
-        dpsx = 5;
-    }
-    document.getElementById("hpx").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp) * hpx;
-    document.getElementById("dmgx").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg) * dmgx;
-    document.getElementById("dpsx").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps) * dpsx;
-    document.getElementById("cost").innerText = unit.cost + "¢";
-    document.getElementById("range").innerText = unit.range;
-    document.getElementById("spd").innerText = unit.speed;
-    document.getElementById("kb").innerText = unit.kb;
-    document.getElementById("atkrate").innerText = unit.atkrate + "s";
-    document.getElementById("atkanim").innerText = unit.atkanim + "s";
-    document.getElementById("recharge").innerText = unit.recharge + "s";
-
-    return false;
-}
-function searchUnit(thing) {
-    //alert(thing);
-    //console.log(thing);
-    var searchValue = document.getElementById("search").value;
-    //console.log(searchValue);
-    let unit = findBySearchTerm(obj.units, searchValue);
-    //console.log(unit);
-    window.location.href = "#" + unit.id.toString();
-    window.location.href = "#anchor";
-
-    for (let i = 0; i < obj.units.length; i++) {
-        if (document.getElementById(obj.units[i].id.toString()) != null) {
-            if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselect")) {
-                document.getElementById(obj.units[i].id.toString()).classList.remove("searchselect");
-            }
-            if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselectrainbow")) {
-                document.getElementById(obj.units[i].id.toString()).classList.remove("searchselectrainbow");
-            }
-        }
-    }
-    if (unit.rarity.toString() === "Legend Rare") {
-        document.getElementById(unit.id.toString()).classList.add("searchselectrainbow");
-        document.getElementById("specialpress").pause();
-        document.getElementById("specialpress").currentTime = 0;
-        document.getElementById("specialpress").play();
-    } else {
-        document.getElementById(unit.id.toString()).classList.add("searchselect");
-        document.getElementById("buttonpress").pause();
-        document.getElementById("buttonpress").currentTime = 0;
-        document.getElementById("buttonpress").play();
-    }
-
-    document.getElementById("basic").src = "cat-icons/" + unit.id.toString() + "-basic.png";
-    document.getElementById("evolved").src = "cat-icons/" + unit.id.toString() + "-evolved.png";
-    document.getElementById("true").src = "cat-icons/" + unit.id.toString() + "-true.png";
-    document.getElementById("ig").src = "cat-ig/" + unit.id.toString() + "-" + unit.form + "IG.png";
-    document.getElementById("form").innerText = unit.form.charAt(0).toUpperCase() + unit.form.slice(1) + " Form";
-    if (unit.rarity === "Legend Rare") {
-        document.getElementById("true").style.display = "none";
-    } else {
-        document.getElementById("true").style.display = "inline";
-    }
-
-    document.getElementById("unit").innerText = unit.name;
-    document.getElementById("role").innerText = "Role: " + unit.role;
-    document.getElementById("desc").innerText = unit.description;
-
-    if (unit.general_abilities.some(item => item === 'Multi')) {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + "Multi.png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack + Multi-Hit";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = unit.multi;
-        document.getElementById("ATtooltip").innerText = txt;
-    } else {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + ".png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = "";
-        document.getElementById("ATtooltip").innerText = txt;
-    }
-
-    document.getElementById("targettraits").innerText = unit.target;
-    if (document.getElementById("basic").classList.contains('selected')) {
-        document.getElementById("basic").classList.remove('selected');
-    }
-    if (document.getElementById("evolved").classList.contains('selected')) {
-        document.getElementById("evolved").classList.remove('selected');
-    }
-    if (document.getElementById("true").classList.contains('selected')) {
-        document.getElementById("true").classList.remove('selected');
-    }
-    document.getElementById(unit.form).classList.add('selected');
-
-    //All General Abilities
-    document.getElementById("Omnistrike").style.display = "none";
-    document.getElementById("Long-Distance").style.display = "none";
-    document.getElementById("Strengthen").style.display = "none";
-    document.getElementById("Survive").style.display = "none";
-    document.getElementById("Base-Destroyer").style.display = "none";
-    document.getElementById("Critical").style.display = "none";
-    document.getElementById("Metal").style.display = "none";
-    document.getElementById("Zombie-Killer").style.display = "none";
-    document.getElementById("Soulstrike").style.display = "none";
-    document.getElementById("Barrier-Breaker").style.display = "none";
-    document.getElementById("Shield-Piercing").style.display = "none";
-    document.getElementById("Savage-Blow").style.display = "none";
-    document.getElementById("Extra-Money").style.display = "none";
-    document.getElementById("Wave").style.display = "none";
-    document.getElementById("Mini-Wave").style.display = "none";
-    document.getElementById("Surge").style.display = "none";
-    document.getElementById("Wave-Shield").style.display = "none";
-    document.getElementById("Colossus-Slayer").style.display = "none";
-    document.getElementById("Behemoth-Slayer").style.display = "none";
-    document.getElementById("Weaken-Immune").style.display = "none";
-    document.getElementById("Freeze-Immune").style.display = "none";
-    document.getElementById("Slow-Immune").style.display = "none";
-    document.getElementById("Knockback-Immune").style.display = "none";
-    document.getElementById("Wave-Immune").style.display = "none";
-    document.getElementById("Surge-Immune").style.display = "none";
-    document.getElementById("Warp-Immune").style.display = "none";
-    document.getElementById("Curse-Immune").style.display = "none";
-    document.getElementById("Toxic-Immune").style.display = "none";
-    document.getElementById("Witch-Killer").style.display = "none";
-    document.getElementById("Eva-Angel-Killer").style.display = "none";
-
-    let general_abilities_list = "";
-    for (let i = 0; i < unit.general_abilities.length; i++) {
-        let start = 0;
-        if (unit.general_abilities[0] === "Multi") {
-            start += 1;
-        }
-        if (unit.general_abilities[i] !== "Multi") {
-            if (i > start) {
-                general_abilities_list += ", ";
-            }
-            document.getElementById(unit.general_abilities[i]).style.display = "inline-block";
-            document.getElementById(unit.general_abilities[i]).alt = unit.name;
-            document.getElementById(unit.general_abilities[i]).name = unit.general_abilities_desc[i];
-            general_abilities_list += unit.general_abilities[i];
-        }
-
-    }
-    document.getElementById("GAtooltip").innerText = general_abilities_list;
-
-    //All Target Abilities
-    document.getElementById("Weaken").style.display = "none";
-    document.getElementById("Freeze").style.display = "none";
-    document.getElementById("Slow").style.display = "none";
-    document.getElementById("Attacks-Only").style.display = "none";
-    document.getElementById("Strong").style.display = "none";
-    document.getElementById("Resistant").style.display = "none";
-    document.getElementById("Insanely-Tough").style.display = "none";
-    document.getElementById("Massive-Damage").style.display = "none";
-    document.getElementById("Insane-Damage").style.display = "none";
-    document.getElementById("Knockback").style.display = "none";
-    document.getElementById("Curse").style.display = "none";
-    document.getElementById("Dodge").style.display = "none";
-
-    let target_abilities_list = "";
-
-    for (let i = 0; i < unit.target_abilities.length; i++) {
-        if (i > 0) {
-            target_abilities_list += ", ";
-        }
-        document.getElementById(unit.target_abilities[i]).style.display = "inline-block";
-        document.getElementById(unit.target_abilities[i]).alt = unit.name;
-        document.getElementById(unit.target_abilities[i]).name = unit.target_abilities_desc[i];
-        target_abilities_list += unit.target_abilities[i];
-    }
-    document.getElementById("TAtooltip").innerText = target_abilities_list;
-
-    document.getElementById("lvl").name = unit.name;
-
-    let level = Math.abs(parseInt(document.getElementById("lvl").value));
-
-    document.getElementById("hp").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp);
-    document.getElementById("dmg").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg);
-    document.getElementById("dps").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps);
-    var hpx = 1;
-    var dmgx = 1;
-    var dpsx = 1;
-    if (document.getElementById("Strong").style.display != "none"){
-        hpx = 2;
-        dmgx = 1.5;
-        dpsx = 1.5;
-    }
-    if (document.getElementById("Resistant").style.display != "none"){
-        hpx = 4;
-    }
-    if (document.getElementById("Insanely-Tough").style.display != "none"){
-        hpx = 6;
-    }
-    if (document.getElementById("Massive-Damage").style.display != "none"){
-        dmgx = 3;
-        dpsx = 3;
-    }
-    if (document.getElementById("Insane-Damage").style.display != "none"){
-        dmgx = 5;
-        dpsx = 5;
-    }
-    document.getElementById("hpx").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp) * hpx;
-    document.getElementById("dmgx").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg) * dmgx;
-    document.getElementById("dpsx").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps) * dpsx;
-    document.getElementById("cost").innerText = unit.cost + "¢";
-    document.getElementById("range").innerText = unit.range;
-    document.getElementById("spd").innerText = unit.speed;
-    document.getElementById("kb").innerText = unit.kb;
-    document.getElementById("atkrate").innerText = unit.atkrate + "s";
-    document.getElementById("atkanim").innerText = unit.atkanim + "s";
-    document.getElementById("recharge").innerText = unit.recharge + "s";
-
-}
-
-
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-// ----------------------------Unit Lookup Functions----------------------------------
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-
-function findByIdAndForm(source, id, form) {
-    for (var i = 0; i < source.length; i++) {
-        if (source[i].id === id) {
-            if (source[i].form === form) {
-                return source[i];
-            }
-        }
-    }
-    throw "Couldn't find object with id: " + id + " and form: " + form;
-}
-function findBySearchTerm(source, term) {
-    for (var i = 0; i < source.length; i++) {
-        if (source[i].name.toUpperCase().includes(term.toUpperCase())) {
-            return source[i];
-        }
-    }
-    throw "Couldn't find object with name: " + term;
-}
-
-
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-// -------------------------------Search Functions------------------------------------
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-
-function filterResults(result) {
-    let val = result.value;
-    const possible = new Array();
-    //console.log(val);
-    if (val.length > 0) {
-        for (var i = 0; i < obj.units.length; i++) {
-            if (obj.units[i].name.toUpperCase().startsWith(val.toUpperCase())) {
-                possible.push(obj.units[i].name);
-                //console.log(obj.units[i].name);
-            }
-        }
-        for (var i = 0; i < obj.units.length; i++) {
-            if (obj.units[i].name.toUpperCase().includes(val.toUpperCase())) {
-                if (!(possible.includes(obj.units[i].name))) {
-                    possible.push(obj.units[i].name);
-                    //console.log(obj.units[i].name);
-                }
-            }
-        }
-    }
-    else {
-        // Update this list: Newest Ubers Released (Non-Seasonal)
-        possible.push("Oni Landshaker Kozuchimaru");
-        possible.push("Child of Destiny Phono");
-        possible.push("Goddess of Light Sirius");
-    }
-    
-    //throw "Couldn't find object with name: " + val;
-    /*for (var i = 0; i < possible.length; i++) {
-        if (possible[i] == 'undefined') {
-            possible[i] = "~";
-        }
-    }*/
-    document.getElementById("result1").value = possible[0];
-    document.getElementById("result2").value = possible[1];
-    document.getElementById("result3").value = possible[2];
-}
-function searchdivDisplay(input) {
-    if (input.name === "hide") {
-        document.getElementById("searchdropdown").style.display = "flex";
-        input.name = "show";
-    } else {
-        document.getElementById("searchdropdown").style.display = "none";
-        input.name = "hide";
-    }
-}
-function searchUnitFromResult(thing) {
-    let term = thing.value;
-    let unit = findBySearchTerm(obj.units, term);
-
-    window.location.href = "#" + unit.id.toString();
-    window.location.href = "#anchor";
-
-    for (let i = 0; i < obj.units.length; i++) {
-        if (document.getElementById(obj.units[i].id.toString()) != null) {
-            if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselect")) {
-                document.getElementById(obj.units[i].id.toString()).classList.remove("searchselect");
-            }
-            if (document.getElementById(obj.units[i].id.toString()).classList.contains("searchselectrainbow")) {
-                document.getElementById(obj.units[i].id.toString()).classList.remove("searchselectrainbow");
-            }
-        }
-    }
-    if (unit.rarity.toString() === "Legend Rare") {
-        document.getElementById(unit.id.toString()).classList.add("searchselectrainbow");
-        document.getElementById("specialpress").pause();
-        document.getElementById("specialpress").currentTime = 0;
-        document.getElementById("specialpress").play();
-    } else {
-        document.getElementById(unit.id.toString()).classList.add("searchselect");
-        document.getElementById("buttonpress").pause();
-        document.getElementById("buttonpress").currentTime = 0;
-        document.getElementById("buttonpress").play();
-    }
-
-
-    document.getElementById("basic").src = "cat-icons/" + unit.id.toString() + "-basic.png";
-    document.getElementById("evolved").src = "cat-icons/" + unit.id.toString() + "-evolved.png";
-    document.getElementById("true").src = "cat-icons/" + unit.id.toString() + "-true.png";
-    document.getElementById("ig").src = "cat-ig/" + unit.id.toString() + "-" + unit.form + "IG.png";
-    document.getElementById("form").innerText = unit.form.charAt(0).toUpperCase() + unit.form.slice(1) + " Form";
-    if (unit.rarity === "Legend Rare") {
-        document.getElementById("true").style.display = "none";
-    } else {
-        document.getElementById("true").style.display = "inline";
-    }
-
-    document.getElementById("unit").innerText = unit.name;
-    document.getElementById("role").innerText = "Role: " + unit.role;
-    document.getElementById("desc").innerText = unit.description;
-
-    if (unit.general_abilities.some(item => item === 'Multi')) {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + "Multi.png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack + Multi-Hit";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = unit.multi;
-        document.getElementById("ATtooltip").innerText = txt;
-    } else {
-        document.getElementById("targetattack").src = "ability-icons/" + unit.attack.toString() + ".png";
-        const txt = unit.attack.charAt(0).toUpperCase() + unit.attack.slice(1) + " Attack";
-        document.getElementById("targetattack").name = txt;
-        document.getElementById("targetattack").alt = "";
-        document.getElementById("ATtooltip").innerText = txt;
-    }
-
-    document.getElementById("targettraits").innerText = unit.target;
-    if (document.getElementById("basic").classList.contains('selected')) {
-        document.getElementById("basic").classList.remove('selected');
-    }
-    if (document.getElementById("evolved").classList.contains('selected')) {
-        document.getElementById("evolved").classList.remove('selected');
-    }
-    if (document.getElementById("true").classList.contains('selected')) {
-        document.getElementById("true").classList.remove('selected');
-    }
-    document.getElementById(unit.form).classList.add('selected');
-
-    //All General Abilities
-    document.getElementById("Omnistrike").style.display = "none";
-    document.getElementById("Long-Distance").style.display = "none";
-    document.getElementById("Strengthen").style.display = "none";
-    document.getElementById("Survive").style.display = "none";
-    document.getElementById("Base-Destroyer").style.display = "none";
-    document.getElementById("Critical").style.display = "none";
-    document.getElementById("Metal").style.display = "none";
-    document.getElementById("Zombie-Killer").style.display = "none";
-    document.getElementById("Soulstrike").style.display = "none";
-    document.getElementById("Barrier-Breaker").style.display = "none";
-    document.getElementById("Shield-Piercing").style.display = "none";
-    document.getElementById("Savage-Blow").style.display = "none";
-    document.getElementById("Extra-Money").style.display = "none";
-    document.getElementById("Wave").style.display = "none";
-    document.getElementById("Mini-Wave").style.display = "none";
-    document.getElementById("Surge").style.display = "none";
-    document.getElementById("Wave-Shield").style.display = "none";
-    document.getElementById("Colossus-Slayer").style.display = "none";
-    document.getElementById("Behemoth-Slayer").style.display = "none";
-    document.getElementById("Weaken-Immune").style.display = "none";
-    document.getElementById("Freeze-Immune").style.display = "none";
-    document.getElementById("Slow-Immune").style.display = "none";
-    document.getElementById("Knockback-Immune").style.display = "none";
-    document.getElementById("Wave-Immune").style.display = "none";
-    document.getElementById("Surge-Immune").style.display = "none";
-    document.getElementById("Warp-Immune").style.display = "none";
-    document.getElementById("Curse-Immune").style.display = "none";
-    document.getElementById("Toxic-Immune").style.display = "none";
-    document.getElementById("Witch-Killer").style.display = "none";
-    document.getElementById("Eva-Angel-Killer").style.display = "none";
-
-    let general_abilities_list = "";
-    for (let i = 0; i < unit.general_abilities.length; i++) {
-        let start = 0;
-        if (unit.general_abilities[0] === "Multi") {
-            start += 1;
-        }
-        if (unit.general_abilities[i] !== "Multi") {
-            if (i > start) {
-                general_abilities_list += ", ";
-            }
-            document.getElementById(unit.general_abilities[i]).style.display = "inline-block";
-            document.getElementById(unit.general_abilities[i]).alt = unit.name;
-            document.getElementById(unit.general_abilities[i]).name = unit.general_abilities_desc[i];
-            general_abilities_list += unit.general_abilities[i];
-        }
-
-    }
-    document.getElementById("GAtooltip").innerText = general_abilities_list;
-
-    //All Target Abilities
-    document.getElementById("Weaken").style.display = "none";
-    document.getElementById("Freeze").style.display = "none";
-    document.getElementById("Slow").style.display = "none";
-    document.getElementById("Attacks-Only").style.display = "none";
-    document.getElementById("Strong").style.display = "none";
-    document.getElementById("Resistant").style.display = "none";
-    document.getElementById("Insanely-Tough").style.display = "none";
-    document.getElementById("Massive-Damage").style.display = "none";
-    document.getElementById("Insane-Damage").style.display = "none";
-    document.getElementById("Knockback").style.display = "none";
-    document.getElementById("Curse").style.display = "none";
-    document.getElementById("Dodge").style.display = "none";
-
-    let target_abilities_list = "";
-
-    for (let i = 0; i < unit.target_abilities.length; i++) {
-        if (i > 0) {
-            target_abilities_list += ", ";
-        }
-        document.getElementById(unit.target_abilities[i]).style.display = "inline-block";
-        document.getElementById(unit.target_abilities[i]).alt = unit.name;
-        document.getElementById(unit.target_abilities[i]).name = unit.target_abilities_desc[i];
-        target_abilities_list += unit.target_abilities[i];
-    }
-    document.getElementById("TAtooltip").innerText = target_abilities_list;
-
-    document.getElementById("lvl").name = unit.name;
-
-    let level = Math.abs(parseInt(document.getElementById("lvl").value));
-
-    document.getElementById("hp").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp);
-    document.getElementById("dmg").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg);
-    document.getElementById("dps").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps);
-    var hpx = 1;
-    var dmgx = 1;
-    var dpsx = 1;
-    if (document.getElementById("Strong").style.display != "none"){
-        hpx = 2;
-        dmgx = 1.5;
-        dpsx = 1.5;
-    }
-    if (document.getElementById("Resistant").style.display != "none"){
-        hpx = 4;
-    }
-    if (document.getElementById("Insanely-Tough").style.display != "none"){
-        hpx = 6;
-    }
-    if (document.getElementById("Massive-Damage").style.display != "none"){
-        dmgx = 3;
-        dpsx = 3;
-    }
-    if (document.getElementById("Insane-Damage").style.display != "none"){
-        dmgx = 5;
-        dpsx = 5;
-    }
-    document.getElementById("hpx").innerText = Math.round((level-1)*(unit.hp*0.2) + unit.hp) * hpx;
-    document.getElementById("dmgx").innerText = Math.round((level-1)*(unit.dmg*0.2) + unit.dmg) * dmgx;
-    document.getElementById("dpsx").innerText = Math.round((level-1)*(unit.dps*0.2) + unit.dps) * dpsx;
-    document.getElementById("cost").innerText = unit.cost + "¢";
-    document.getElementById("range").innerText = unit.range;
-    document.getElementById("spd").innerText = unit.speed;
-    document.getElementById("kb").innerText = unit.kb;
-    document.getElementById("atkrate").innerText = unit.atkrate + "s";
-    document.getElementById("atkanim").innerText = unit.atkanim + "s";
-    document.getElementById("recharge").innerText = unit.recharge + "s";
-}
-
-
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-// -------------------------Background Music Functions--------------------------------
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-
-function pauseplay(elem) {
-    if (elem.name === "paused") {
-        elem.name = "playing";
-        elem.value = "⏸";
-        document.getElementById("bgmusic").play();
-    } else {
-        elem.name = "paused";
-        elem.value = "▶️";
-        document.getElementById("bgmusic").pause();
-    }
-}
-function shuffle(elem) {
-    let index = parseInt(elem.name);
-    if (index > songs.length - 1) {
-        index = 0;
-    }
-    //document.getElementById("bgmusic").pause();
-    document.getElementById("bgmusic").pause();
-    document.getElementById("bgmusic").currentTime = 0;
-    document.getElementById("bgmusic").src = songs[index];
-    document.getElementById("bgmusic").play();
-    //document.getElementById("bgmusic").play();
-    document.getElementById("playbutton").name = "playing";
-    document.getElementById("playbutton").value = "⏸";
-    index += 1;
-    elem.name = index;
-}
-
-
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-// -------------------------------Misc Functions--------------------------------------
-// -----------------------------------------------------------------------------------
-// -----------------------------------------------------------------------------------
-
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-    document.getElementById("body").style = "animation-play-state: running;";
-}
-function scrollToNoise() {
-    document.getElementById("scroll").pause();
-    document.getElementById("scroll").currentTime = 0;
-    document.getElementById("scroll").play();
-}
-function position(element) {
-    const rect = element.getBoundingClientRect();
-    return {
-        left: rect.left + window.scrollX,
-        top: rect.top + window.scrollY
-    }
-}
-function disabledPlay() {
-    document.getElementById("buttonrestricted").pause();
-    document.getElementById("buttonrestricted").currentTime = 0;
-    document.getElementById("buttonrestricted").play();
-}
-
-function hoverTextChangeAtk(element) {
-    let id = element.name;
-    let desc = element.alt;
-    var addend = "\n[" + desc + "]";
-    if (desc.length > 1) {
-        document.getElementById("ATtooltip").innerText = id + addend;
-    } else {
-        document.getElementById("ATtooltip").innerText = id;
-    }
-}
-function hoverTextRevertAtk(element) {
-    let id = element.name;
-    document.getElementById("ATtooltip").innerText = id;
-}
-function hoverTextChangeGA(element) {
-    let id = element.id;
-    let desc = element.name;
-    var addend = "\n[" + desc + "]";
-    if (desc.length > 1) {
-        document.getElementById("GAtooltip").innerText = id + addend;
-    } else {
-        document.getElementById("GAtooltip").innerText = id;
-    }
-    
-}
-function hoverTextRevertGA(element) {
-    let id = element.alt;
-    var unit = findBySearchTerm(obj.units, id);
-    let general_abilities_list = "";
-    for (let i = 0; i < unit.general_abilities.length; i++) {
-        let start = 0;
-        if (unit.general_abilities[0] === "Multi") {
-            start += 1;
-        }
-        if (unit.general_abilities[i] !== "Multi") {
-            if (i > start) {
-                general_abilities_list += ", ";
-            }
-            general_abilities_list += unit.general_abilities[i];
-        }
-
-    }
-    document.getElementById("GAtooltip").innerText = general_abilities_list;
-}
-function hoverTextChangeTA(element) {
-    let id = element.id;
-    let desc = element.name;
-    var addend = "\n[" + desc + "]";
-    if (desc.length > 1) {
-        document.getElementById("TAtooltip").innerText = id + addend;
-    } else {
-        document.getElementById("TAtooltip").innerText = id;
-    }
-}
-function hoverTextRevertTA(element) {
-    let id = element.alt;
-    var unit = findBySearchTerm(obj.units, id);
-    let target_abilities_list = "";
-    for (let i = 0; i < unit.target_abilities.length; i++) {
-        if (i > 0) {
-            target_abilities_list += ", ";
-        }
-        target_abilities_list += unit.target_abilities[i];
-    }
-    document.getElementById("TAtooltip").innerText = target_abilities_list;
-}
-		// -----------------------------------------------------------------------------------
-		// -----------------------------------------------------------------------------------
-		// ----------------------------------End of JS----------------------------------------
-		// -----------------------------------------------------------------------------------
-		// -----------------------------------------------------------------------------------
